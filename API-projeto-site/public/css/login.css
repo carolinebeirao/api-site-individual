@@ -157,11 +157,11 @@ nav ul {
 
 #marca {
     /* background-color: blue; */
-    width: 60%;
+    width: 45%;
     display: flex;
     color: white;
     font-family: 'arial black';
-    margin: 0 auto ;  
+    margin: 100px auto ;  
 }
 
 #marca img {
@@ -195,4 +195,20 @@ nav ul {
 #loading{
    padding-left: 140px;
    margin-top: 20px;
+}
+
+/* BOTÃO */
+
+button {
+    height: 30px;
+    border-radius:  8px;
+    border: 0px;
+    background-color: #9234f7;
+    color: white;
+    width: 30%;
+}
+
+button:hover {
+    background-color:#7e04f7 ;
+    color: white;
 }

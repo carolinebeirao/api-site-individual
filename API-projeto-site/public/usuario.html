@@ -26,7 +26,7 @@
                                 <li>Inicio</li>
                             </a>
                             <a href="">
-                                <li>link</li>
+                                <li>Sair</li>
                             </a>
                         </span>
                     </nav>
@@ -53,7 +53,7 @@
             <h5>INSERIR NOVO TÓPICO </h5>
             <div id="top">
 
-                <form id="form_cadastrartopico" method="post"></form>
+
                 <div id="disciplina-topico">
                     <p>Disciplina</p>
                     <textarea id="ndisciplina" placeholder="nome da disciplina"></textarea>
@@ -81,7 +81,7 @@
                     <option value="dom1">Domingo</option>
                 </select>
                 <button onclick="bt_cadastrar()">ADICIONAR</button>
-                </form>
+
 
 
             </div>
@@ -161,11 +161,10 @@
     </div>
     <div id="lembretes">
         <div id="baixo">
-
             <div id="prox">
                 <h3>ADICIONAR LEMBRETE</h3>
                 <div id="adicionalembrete">
-                    <!-- <form id="form_cadastrartopico" method="post" onsubmit="return cadastrarlembrete()"></form> -->
+
                     <div id="lembrete-topico">
                         <p>O que você deseja lembrar ?</p>
                         <textarea id="arealembrete" placeholder="digite aqui"></textarea>
@@ -175,26 +174,38 @@
                         <input type="date" id="datalembrete"></input>
                     </div>
                     <button onclick="bt_cadastrarlembrete()">ADICIONAR</button>
-                    </form>
+
                 </div>
             </div>
             <div id="prox">
                 <h3>LEMBRETES</h3>
-                <div style=" color: rgb(250, 213, 92); font-family: arial; justify-content: space-between;" id="msglembrete">
-                   
+                <div style=" color: rgb(250, 213, 92); font-family: arial; justify-content: space-between;"
+                    id="msglembrete">
+
                 </div>
             </div>
-
             <div id="dash">
-                <h3>FRASE DO DIA</h3>
+                <div style="display: flex;">
+                    <h3>FRASE DO DIA</h3>
+                    <button onclick="sortear()" id="sort">VER</button>
+                </div>
+
                 <div id="msgdodia">
-                    <br> <br> <br> <br> O primeiro pecado da humanidade foi a fé;<br> a primeira virtude foi a dúvida. ... <br> <br> Carl Sagan -
+                    <br> <br> <br> <br> há uma frase te esperando hoje. ... <br> <br>
                 </div>
             </div>
-
         </div>
     </div>
+    <div id="rodape">
+        <div>
 
+        </div>
+
+        <div id="copy">
+            <p>Copyright © 2021, Caroline Beirão. Bandtec.</p>
+        </div>
+
+    </div>
 
 </body>
 
@@ -263,12 +274,43 @@
 
     }
 
+
+    // cadastro de lembrete
     function bt_cadastrarlembrete() {
         var lembrete = arealembrete.value;
         var data = datalembrete.value;
         msglembrete.innerHTML += ` <div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:white;">  ${lembrete} </span>  <span style="font-size: 14px; color:#e46c6c;">  ${data}</span> </div> <hr>`;
 
     }
+
+    //soteio de frase do dia
+    function sortear() {
+        var aleatorio = parseInt((Math.random()*10)+1);
+        
+        if (aleatorio == 1) {
+            msgdodia.innerHTML = `<br> <br> <br> <br>  “O que sabemos é uma gota; o que ignoramos é um oceano.” <br> <br> Isaac Newton:`;
+        } else if (aleatorio == 2) {
+            msgdodia.innerHTML = `<br> <br> <br> <br>  “Viver é enfrentar um problema atrás do outro. O modo como você o encara é que faz a diferença.” <br> <br> Benjamin Franklin:`;
+        } else if (aleatorio == 3) {
+            msgdodia.innerHTML = `<br> <br> <br> <br>  “Há verdadeiramente duas coisas diferentes: saber e crer que se sabe. A ciência consiste em saber; em crer que se sabe reside a ignorância.” <br> <br>Hipócrates:`;
+        } else if (aleatorio == 4) {
+            msgdodia.innerHTML = `<br> <br> <br> <br>  “Faça as coisas o mais simples que você puder, porém não se restrinja às mais simples.” <br> <br> Albert Einstein:`;
+        } else if (aleatorio == 5) {
+            msgdodia.innerHTML = `<br> <br> <br> <br> “Pouco conhecimento faz com que as pessoas se sintam orgulhosas. Muito conhecimento, com que se sintam humildes.” <br> <br> Leonardo da Vinci: `;
+        } else if (aleatorio == 6) {
+            msgdodia.innerHTML = `<br> <br> <br> <br>  “Um trabalho te dá um propósito e um significado. A vida é vazia sem ambos.” <br> <br>Stephen Hawking:`;
+        } else if (aleatorio == 7) {
+            msgdodia.innerHTML = `<br> <br> <br> <br> “Você não pode ensinar nada a ninguém, mas pode ajudar a pessoas a descobrirem por si mesmas.” <br> <br>  Galileu Galilei: `;
+        } else if (aleatorio == 8) {
+            msgdodia.innerHTML = `<br> <br> <br> <br>  “Aquele que ousa perder uma hora de seu tempo não sabe o valor da vida." <br> <br>Charles Darwin:`;
+        } else if (aleatorio == 9) {
+            msgdodia.innerHTML = `<br> <br> <br> <br>  "Ninguém que é curioso é idiota. As pessoas que não fazem perguntas permanecem ignorantes para o resto de suas vidas." <br> <br> Neil DeGrasse Tyson:`;
+        } else if (aleatorio == 10) {
+            msgdodia.innerHTML = `<br> <br> <br> <br>  “Quem não quer ser aconselhado, não pode ser ajudado.” <br> <br> Benjamin Franklin:`;
+        }
+    }
+
+
 
     verificar_autenticacao();
 
