@@ -173,10 +173,10 @@
                 <div id="prox">
                     <h3>ADICIONAR LEMBRETE</h3>
                     <div id="cx-prox">
-                        <form id="form_cadastrartopico" method="post" onsubmit="return cadastrartopico()"></form>
+                        <!-- <form id="form_cadastrartopico" method="post" onsubmit="return cadastrartopico()"></form> -->
                         <div id="lembrete-topico">
                             <p>Digite o lembrete</p>
-                            <textarea id="ndisciplina" placeholder="lembretes"></textarea>
+                            <textarea id="" placeholder="lembretes"></textarea>
                         </div>
                         <div id="assunto-topico">
                             <p>Assunto</p>
@@ -198,10 +198,6 @@
                     </div>
                 </div>
 
-                <div id="dash">
-                    <h3>FRASE DO DIA</h3>
-                    <div id="cx-dash"></div>
-                </div>
             </div>
         </div>
     
@@ -240,17 +236,17 @@
         if (dia == 'seg1') {
             msgseg.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
         } else if (dia == 'ter1') {
-            msgter.innerHTML += `<span style="font-size: 10px;">  ${disciplina} </span> <br> <span style="font-size: 12px;">  ${assunto}</span> <br> <span style="font-size: 14px;"> ${titulo}</span>  <br> <span style="font-size: 16px;">${descricao}  </span> <br><br>`;
+            msgter.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
         } else if (dia == 'qua1') {
-            msgqua.innerHTML += `<span style="font-size: 10px;">  ${disciplina} </span> <br> <span style="font-size: 12px;">  ${assunto}</span> <br> <span style="font-size: 14px;"> ${titulo}</span>  <br> <span style="font-size: 16px;">${descricao}  </span> <br><br>`;
+            msgqua.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
         } else if (dia == 'qui1') {
-            msgqui.innerHTML += `<span style="font-size: 10px;">  ${disciplina} </span> <br> <span style="font-size: 12px;">  ${assunto}</span> <br> <span style="font-size: 14px;"> ${titulo}</span>  <br> <span style="font-size: 16px;">${descricao}  </span> <br><br>`;
+            msgqui.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
         } else if (dia == 'sex1') {
-            msgsex.innerHTML += `<span style="font-size: 10px;">  ${disciplina} </span> <br> <span style="font-size: 12px;">  ${assunto}</span> <br> <span style="font-size: 14px;"> ${titulo}</span>  <br> <span style="font-size: 16px;">${descricao}  </span> <br><br>`;
+            msgsex.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
         } else if (dia == 'sab1') {
-            msgsab.innerHTML += `<span style="font-size: 10px;">  ${disciplina} </span> <br> <span style="font-size: 12px;">  ${assunto}</span> <br> <span style="font-size: 14px;"> ${titulo}</span>  <br> <span style="font-size: 16px;">${descricao}  </span> <br><br>`;
+            msgsab.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
         } else if (dia == 'dom1') {
-            msgdom.innerHTML += `<span style="font-size: 10px;">  ${disciplina} </span> <br> <span style="font-size: 12px;">  ${assunto}</span> <br> <span style="font-size: 14px;"> ${titulo}</span>  <br> <span style="font-size: 16px;">${descricao}  </span> <br><br>`;
+            msgdom.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
         }
 
         //Limpando inputs e innerHTML de disciplinas para não repetir
