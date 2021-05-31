@@ -125,7 +125,7 @@ nav ul {
 /* LADO DIREITO CONTEUDO CRONOGRAMA */
 
 #rigth-red{
-    background-color: red;
+    /* background-color: red; */
     height: 80%;
     width: 80%;
 }
@@ -422,7 +422,7 @@ button:hover {
 
 #lembretes {
     margin-top: 100px;
-    background-color: #7e04f7;
+    /* background-color: #7e04f7; */
     height: 300px;
 
 }
@@ -454,7 +454,8 @@ button:hover {
     background-color:rgba(255, 255, 255, 0.158) ;
     border-radius: 5px;
     height: 85%;
-    width: 95%;
+    width: 90%;
+    padding: 10px;
     justify-content: space-between;
 }
 
@@ -477,6 +478,20 @@ button:hover {
     background-color:rgba(255, 255, 255, 0.158) ;
     border-radius: 5px;
     height: 85%;
-    width: 50%;
+    width: 90%;
+    padding: 10px;
+}
+
+#cx-prox p {
+    color: white;
+    font-family: arial;
+}
+
+#msglembrete {
+    background-color:rgba(255, 255, 255, 0.158) ;
+    border-radius: 5px;
+    height: 85%;
+    width: 95%;
+    padding: 10px;
 }
 

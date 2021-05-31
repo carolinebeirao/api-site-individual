@@ -171,13 +171,31 @@
             <div id="baixo">
 
                 <div id="prox">
+                    <h3>ADICIONAR LEMBRETE</h3>
+                    <div id="cx-prox">
+                        <form id="form_cadastrartopico" method="post" onsubmit="return cadastrartopico()"></form>
+                        <div id="lembrete-topico">
+                            <p>Digite o lembrete</p>
+                            <textarea id="ndisciplina" placeholder="lembretes"></textarea>
+                        </div>
+                        <div id="assunto-topico">
+                            <p>Assunto</p>
+                            <input type="date" id="data-lembrete"></input>
+                        </div>
+                        <button onclick="bt_cadastrar_lembrete()">ADICIONAR</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="prox">
                     <h3>LEMBRETES</h3>
-                    <div id="cx-prox"></div>
+                    <div id="msglembrete"></div>
                 </div>
                
                 <div id="dash">
                     <h3>FRASE DO DIA</h3>
-                    <div id="cx-dash"></div>
+                    <div id="cx-dash">
+                       
+                    </div>
                 </div>
 
                 <div id="dash">
