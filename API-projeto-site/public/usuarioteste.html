@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/usuario.css">
+    <script type="text/javascript" src="funcoes.js"></script>
+    <title>MYSTUDY.COM</title>
+</head>
+
+<body >
+
+    <div id="caixatotal">
+        <div id="left-barra">
+            <div id="grade-left">
+            </div>
+
+            <div id="menu-left">
+                <div id="caixa">
+                    <nav id="nav1">
+                        <img src="./imagens/chapeubranco.svg" alt="" width="25px">
+                        <span id="navleft">
+                            <a href="./index.html">
+                                <li>Inicio</li>
+                            </a>
+                            <a href="">
+                                <li>link</li>
+                            </a>
+                        </span>
+                    </nav>
+                </div>
+                <div id="bloco-tit">
+                    <h3>DISCILINAS</h3>
+                </div>
+                <div id="bloco-conteudo">
+                    <div>
+                        teste de texto aqui
+                    </div>
+                </div>
+                <div id="bloco-conteudo">
+                    <div>
+                        teste de texto aqui
+                    </div>
+                </div>
+                <div id="bloco-conteudo">
+                    <div>
+                        teste de texto aqui
+                    </div>
+                </div>
+                <div id="bloco-conteudo">
+                    <div>
+                        teste de texto aqui
+                    </div>
+                </div>
+                <!-- <div id="bloco-conteudo">
+                    <div>
+                        teste de texto aqui
+                    </div>
+                </div>
+                <div id="bloco-conteudo">
+                    <div>
+                        teste de texto aqui
+                    </div>
+                </div>
+                <div id="bloco-conteudo">
+                    <div>
+                        teste de texto aqui
+                    </div>
+                </div>
+                <div id="bloco-conteudo">
+                    <div>
+                        teste de texto aqui
+                    </div>
+                </div>
+                <div id="bloco-conteudo">
+                    <div>
+                        teste de texto aqui
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div id="rigth-red">
+            <div id="top">
+
+
+
+                <form id="form_cadastrartopico" method="post" onsubmit="return cadastrartopico()"></form>
+
+
+                <div id="disciplina-topico">
+                    <p>Disciplina</p>
+                    <textarea id="" rows="3" cols="50" maxlength="20" name="nomeDisciplina"></textarea>
+                    <button id="btn_cadastrartopico" >adicionar<img src="" alt=""></button>
+                </div>
+                <div id="assunto-topico">
+                    <p>Assunto</p>
+                    <textarea id="" rows="3" cols="50" maxlength="20" name="nomeAssunto"></textarea>
+                    <button id="btn_cadastrartopico" >adicionar<img src="" alt=""></button>
+                </div>
+                <div id="nome-topico">
+                    <p>Titulo do topico</p>
+                    <textarea id="" rows="3" cols="50" maxlength="20" name="nomeTopico"></textarea>
+                    <button id="btn_cadastrartopico" >adicionar<img src="" alt=""></button>
+                </div>
+                <div id="descricao-topico">
+                    <p>descrição do topico</p>
+                    <textarea id="" rows="3" cols="50" maxlength="255" name="descricaoTopico"></textarea>
+                    <button id="btn_cadastrartopico" >adicionar<img src="" alt=""></button>
+                </div>
+                <select name="dia" id="">
+                    <option value="seg">adicionar dia</option>
+                    <option value="seg">Segunda</option>
+                    <option value="ter">Terça</option>
+                    <option value="qua">Quarta</option>
+                    <option value="qui">Quinta</option>
+                    <option value="sex">Sexta</option>
+                    <option value="sab">Sabado</option>
+                    <option value="dom">Domingo</option>
+                </select>
+
+                <div id="descricao-topico">
+                    <p>descrição do topico</p>
+                    <textarea id="" rows="3" cols="50" maxlength="255" name="descricaoTopico"></textarea>
+                    <button>adicionar<img src="" alt=""></button>
+                </div>
+
+                </form>
+
+
+
+                <div id="usuario-logado">
+                    <div id="nome-usuario"><b id="b_usuario"></b></div>
+                    <div id="foto-usuario"><img src="/imagens/fotolucas.png" alt=""></div>
+                    <div id="icone-notificação"><img src="/imagens/iconenotificacao.png" alt=""></div>
+                </div>
+            </div>
+            <div id="meio">
+                <div id="caixa-meio">
+                    <div id="tit-meio">
+                        <h3>MINHA SEMANA</h3>
+                        <div id="cx-cronograma">
+                            <div id="cx-dias">
+                                <div id="seg">
+                                    <h4>segunda</h4>
+                                    <div id="cx-conteudo">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting <br><br>
+                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                        ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting <br><br>
+                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                        ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting <br><br>
+                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                        ever since the 1500s, when
+                                    </div>
+                                </div>
+                                <div id="ter">
+                                    <h4>terca</h4>
+                                    <div id="cx-conteudo">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting <br><br>
+                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                        ever since the 1500s, when <br><br>
+                                        industry. Lorem IpsLorem Ipsum is simply dummy text of the printing and
+                                        typesetting <br><br>
+                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                        ever since the 1500s, whenum has been the industry's standard dummy text
+                                    </div>
+                                </div>
+                                <div id="qua">
+                                    <h4>quarta</h4>
+                                    <div id="cx-conteudo">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting <br><br>
+                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                        ever since the 1500s, when <br><br>
+                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                    </div>
+                                </div>
+                                <div id="qui">
+                                    <h4>quinta</h4>
+                                    <div id="cx-conteudo">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting <br><br>
+                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                        ever since the 1500s, when
+                                    </div>
+                                </div>
+                                <div id="sex">
+                                    <h4> sexta </h4>
+                                    <div id="cx-conteudo">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting <br><br>
+                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                        ever since the 1500s, when <br><br>
+                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                    </div>
+                                </div>
+                                <div id="sab">
+                                    <h4> sabado </h4>
+                                    <div id="cx-conteudo">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting <br><br>
+                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                        ever since the 1500s, when <br><br>
+                                        industry. Lorem Ipsum has been the industry's standard dummy text
+                                    </div>
+                                    <div id="dom">
+                                        <h4> domingo </h4>
+                                        <div id="cx-conteudo">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting <br><br>
+                                            industry. Lorem Ipsum has been the industry's standard dummy text
+                                            ever since the 1500s, when <br><br>
+                                            industry. Lorem Ipsum has been the industry's standard dummy text
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="baixo">
+
+                <div id="prox">
+                    <h3>ALGUMA</h3>
+                    <div id="cx-prox"></div>
+                </div>
+                <div id="atra">
+                    <h3>COISA</h3>
+                    <div id="cx-atra"></div>
+                </div>
+                <div id="dash">
+                    <h3>AQUI</h3>
+                    <div id="cx-dash"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+
+
+</script>

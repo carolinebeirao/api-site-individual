@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>ENTRAR</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <div id="caixa">
+            <nav id="nav1">
+                <img src="./imagens/chapeubranco.svg" alt="" width="25px">
+                <span id="navleft">
+                    <a href="./index.html">
+                        <li>Inicio</li>
+                    </a>
+                    <a href="./cadastro.html">
+                        <li>Cadastrar</li>
+                    </a>
+                    <a href="./login.html">
+                        <li>Entrar</li>
+                    </a>
+                </span>
+            </nav>
+            <nav id="nav2">
+                <ul>
+                    <a href="">
+                        <img id="rsocial" src="./imagens/facebookroxo.svg" alt="">
+                    </a>
+                    <a href="">
+                        <img id="rsocial" src="./imagens/instagramroxo.svg" alt="">
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="contato">
+        <div class="container">
+            <h1>Faça aqui seu login!</h1>
+            <div class="formulario">
+                <form id="form_login" method="post" onsubmit="return entrar()">
+
+                    <div class="inpt_style">
+                        <p>Usuario</p>
+                        <input type="text" class="input-padrao" name="login">
+                    </div>
+
+                    <div class="inpt_style">
+                        <p>Senha</p>
+                        <input type="password" class="input-padrao" name="senha">
+                    </div>
+
+                    <div id="inpt_cadastrar">
+                        <p></p>
+                        <button id="btn_entrar" class="btn-green">Entrar</button>
+                    </div>
+            </div>
+
+            </form>
+
+            <div class="extra">
+                <div id="div_erro" class="msg_erro">
+                </div>
+                <div id="loading">
+                    <img src="./imagens/tenorcinza..gif" id="img_aguarde" style="width: 40px; display: none;">
+                </div>
+                <!--style="display: none;"-->
+
+            </div>
+            <div id="marca">
+                <img src="./imagens/chapeubranco.svg" alt="">
+                <p>MYSTUDY</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.login;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+
+                    window.location.href = 'usuario.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.visibility = 'visible';
+        div_erro.style.visibility = 'hidden';
+    }
+
+    function finalizar_aguardar(resposta) {
+        btn_entrar.disabled = false;
+        img_aguarde.style.visibility = 'hidden';
+        div_erro.style.visibility = 'visible';
+        div_erro.innerHTML = resposta;
+    }
+
+</script>

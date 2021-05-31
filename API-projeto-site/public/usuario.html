@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/usuario.css">
+    <!-- <script type="text/javascript" src="funcoes.js"></script> -->
+    <title>MYSTUDY.COM</title>
+</head>
+
+<body>
+
+    <div id="caixatotal">
+        <div id="left-barra">
+            <div id="grade-left">
+            </div>
+
+            <div id="menu-left">
+                <div id="caixa">
+                    <nav id="nav1">
+                        <img src="./imagens/chapeubranco.svg" alt="" width="25px">
+                        <span id="navleft">
+                            <a href="./index.html">
+                                <li>Inicio</li>
+                            </a>
+                            <a href="">
+                                <li>link</li>
+                            </a>
+                        </span>
+                    </nav>
+                </div>
+                <div id="bloco-tit">
+                    <h3>DISCILINAS</h3>
+                </div>
+                <div id="blocodisciplina">
+
+                </div>
+
+
+            </div>
+        </div>
+        <div id="rigth-red">
+
+            <div id="usuario-logado">
+                <div id="nome-usuario"> <b>Olá, </b><b id="b_usuario">nome aqui</b></div>
+                <div id="icone-notificação"><img src="/imagens/formabase.png" alt=""></div>
+            </div>
+
+            <h5>INSERIR NOVO TÓPICO </h5>
+            <div id="top">
+
+                <form id="form_cadastrartopico" method="post" onsubmit="return cadastrartopico()"></form>
+
+
+                <div id="disciplina-topico">
+                    <p>Disciplina</p>
+                    <textarea id="ndisciplina" placeholder="nome da disciplina"></textarea>
+                </div>
+                <div id="assunto-topico">
+                    <p>Assunto</p>
+                    <textarea id="nassunto" placeholder="nome do assunto"></textarea>
+                </div>
+                <div id="nome-topico">
+                    <p>Titulo do topico</p>
+                    <textarea id="ntitulo" placeholder="nome do topico"></textarea>
+                </div>
+                <div id="descricao-topico">
+                    <p>descrição do topico</p>
+                    <textarea id="dtopico" placeholder="descrição do topico"></textarea>
+                </div>
+                <select id="sdia">
+                    <option value="">selecionar dia</option>
+                    <option value="seg1">Segunda</option>
+                    <option value="ter1">Terça</option>
+                    <option value="qua1">Quarta</option>
+                    <option value="qui1">Quinta</option>
+                    <option value="sex1">Sexta</option>
+                    <option value="sab1">Sabado</option>
+                    <option value="dom1">Domingo</option>
+                </select>
+                <button onclick="bt_cadastrar()">ADICIONAR</button>
+                </form>
+
+                <!-- <div id="msg">
+                    <div id="disciplina"></div>
+                    <div id="Assunto"></div>
+                    <div id="titulo"></div>
+                    <div id="descricao"></div>
+                </div> -->
+
+            </div>
+            <div id="meio">
+                <div id="caixa-meio">
+                    <div id="tit-meio">
+                        <h3>MINHA SEMANA</h3>
+                        <div id="cx-cronograma">
+                            <div id="cx-dias">
+                                <div id="seg">
+                                    <h4>segunda</h4>
+                                    <div id="cx-conteudo">
+                                        <div id="msgseg"></div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div id="ter">
+                                    <h4>terca</h4>
+                                    <div id="cx-conteudo">
+                                        <div id="msgter"></div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div id="qua">
+                                    <h4>quarta</h4>
+                                    <div id="cx-conteudo">
+                                        <div id="msgqua"></div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div id="qui">
+                                    <h4>quinta</h4>
+                                    <div id="cx-conteudo">
+                                        <div id="msgqui"></div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div id="sex">
+                                    <h4> sexta </h4>
+                                    <div id="cx-conteudo">
+                                        <div id="msgsex"></div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div id="sab">
+                                    <h4> sabado </h4>
+                                    <div id="cx-conteudo">
+                                        <div id="msgsab"></div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                    <div id="dom">
+                                        <h4> domingo </h4>
+                                        <div id="cx-conteudo">
+                                            <div id="msgdom"></div>
+                                            <br>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="baixo">
+
+                <div id="prox">
+                    <h3>ALGUMA</h3>
+                    <div id="cx-prox"></div>
+                </div>
+                <div id="atra">
+                    <h3>COISA</h3>
+                    <div id="cx-atra"></div>
+                </div>
+                <div id="dash">
+                    <h3>AQUI</h3>
+                    <div id="cx-dash"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    var vdisciplina = [];
+    function bt_cadastrar() {
+        var disciplina = ndisciplina.value;
+        var assunto = nassunto.value;
+        var titulo = ntitulo.value;
+        var descricao = dtopico.value;
+        var dia = sdia.value;
+
+        // laço para verificar se disciplina ja foi cadastrado 
+        for (index = 0; index <= vdisciplina.length; index++) {
+            if (disciplina == '') { // if para não cadastrar disciplina sem valor no vetor
+                break
+            }
+            if (vdisciplina[index] == disciplina) {   //caso tenha sido cadastrado pare o laço
+                break
+            } // se não foi continuar o laço 
+        }
+        // if para verificar se parou porque já existe (é == disciplina) ou se parou pq atingiu o limite do laço
+        // Se for indicando que não foi cadastrado ( será > length) ele fará o push
+        if (index > vdisciplina.length) {
+            vdisciplina.push(ndisciplina.value);
+        }
+
+
+        
+        //dia da semana que sera cadastrado
+        if (dia == 'seg1') {
+            msgseg.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
+        } else if (dia == 'ter1') {
+            msgter.innerHTML += `<span style="font-size: 10px;">  ${disciplina} </span> <br> <span style="font-size: 12px;">  ${assunto}</span> <br> <span style="font-size: 14px;"> ${titulo}</span>  <br> <span style="font-size: 16px;">${descricao}  </span> <br><br>`;
+        } else if (dia == 'qua1') {
+            msgqua.innerHTML += `<span style="font-size: 10px;">  ${disciplina} </span> <br> <span style="font-size: 12px;">  ${assunto}</span> <br> <span style="font-size: 14px;"> ${titulo}</span>  <br> <span style="font-size: 16px;">${descricao}  </span> <br><br>`;
+        } else if (dia == 'qui1') {
+            msgqui.innerHTML += `<span style="font-size: 10px;">  ${disciplina} </span> <br> <span style="font-size: 12px;">  ${assunto}</span> <br> <span style="font-size: 14px;"> ${titulo}</span>  <br> <span style="font-size: 16px;">${descricao}  </span> <br><br>`;
+        } else if (dia == 'sex1') {
+            msgsex.innerHTML += `<span style="font-size: 10px;">  ${disciplina} </span> <br> <span style="font-size: 12px;">  ${assunto}</span> <br> <span style="font-size: 14px;"> ${titulo}</span>  <br> <span style="font-size: 16px;">${descricao}  </span> <br><br>`;
+        } else if (dia == 'sab1') {
+            msgsab.innerHTML += `<span style="font-size: 10px;">  ${disciplina} </span> <br> <span style="font-size: 12px;">  ${assunto}</span> <br> <span style="font-size: 14px;"> ${titulo}</span>  <br> <span style="font-size: 16px;">${descricao}  </span> <br><br>`;
+        } else if (dia == 'dom1') {
+            msgdom.innerHTML += `<span style="font-size: 10px;">  ${disciplina} </span> <br> <span style="font-size: 12px;">  ${assunto}</span> <br> <span style="font-size: 14px;"> ${titulo}</span>  <br> <span style="font-size: 16px;">${descricao}  </span> <br><br>`;
+        }
+
+        //Limpando inputs e innerHTML de disciplinas para não repetir
+        blocodisciplina.innerHTML = ``;
+        ndisciplina.value = '';
+        nassunto.value = '';
+        ntitulo.value = '';
+        dtopico.value = '';
+        sdia.value = '';
+
+        //Laço para imprimir todos os vetores cadastrados em vdisciplinas para não ter repetição de nomes
+        for (cont = 0; cont < vdisciplina.length; cont++) {
+            blocodisciplina.innerHTML += `
+                  <div id="bloco-conteudo">
+                        <div>
+                            ${vdisciplina[cont]}
+                        </div>
+                    </div>`;
+        }
+
+    }
+
+</script>

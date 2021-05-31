@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #454545;
+    font-family: arial;
+}
+
+a {
+    text-decoration: none; 
+    text-transform: none;
+    color: inherit; 
+}
+
+/* INICIO  NAVERGAÇÃO*/
+
+.header {
+    background-color: #454545;
+    color: rgb(255, 255, 255);
+    height: 50px;
+}
+
+#caixa {
+    background-color: #454545;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 85%;
+}
+
+nav  li {
+    /* background-color: #be0000; */
+    margin: 10px;
+    display: inline;
+    padding: 15px 4px 15px 4px;
+    font-family: arial;
+    margin-top:5px;   
+}
+
+nav ul {
+    margin: 0;
+}
+
+#nav1 {
+    /* background-color: rgb(82, 27, 27); */
+    margin-top: 0;
+    padding-top:10px ;
+    font-family: Livvic;
+}
+
+#nav1 a:hover {
+    background-color: #0c0c0c6e;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 8px 8px 8px 8px ;
+}
+
+#nav1 img {
+    margin-right: 10px;
+    /* background-color: blueviolet; */
+}
+
+#navleft {
+    background-color: #454545;
+}
+
+#nav2 {
+    /* background-color: rgb(184, 57, 57); */
+    margin: 0 0 0 10px;
+    padding-top:5px ;
+    font-family: Arial;
+}
+
+#nav2 ul img {
+    margin-right: 10px; 
+    
+}
+
+#rsocial {
+    overflow: hidden;
+
+}
+
+#rsocial:hover {
+    border: 3px solid #9339F4;
+    border-radius: 25px;
+    -webkit-transform: scale(0.1);
+    transform: scale(1.0);
+   
+}
+
+/* FIM NAVERGAÇÃO*/
+
+/* INICIO APRESENTAÇÃO */
+
+.apresentacao {
+    background-color: #454545;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    border-bottom: 12px solid #ffffff;
+    margin-bottom: 0px;
+}
+
+#logomesa {
+    padding-left: 10%;
+}
+
+#btcaixas  {
+    position: absolute;
+    background-color: #ffffff;
+    display: inline-block;
+    width: 40%;
+    height: 0px;
+    margin: 8% 0 0 50%;  
+    font-weight: 400;  
+}
+
+#cx1 {
+    /* background-color:rgb(18, 129, 92) ; */
+    height: 60px;
+    width:80%;  
+    
+}
+
+#cx1 p {
+    /* background-color:aquamarine ; */
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    font-family: arial;
+    font-size:25px;
+    color: #ffffffec;;
+    line-height: 30px;
+    /* font-weight: 600; */
+    letter-spacing: 1px;
+    /* text-transform: uppercase; */
+    text-shadow: 2px 1px 2px rgba(185, 172, 127, 0.822) ;
+}
+#btcaixas p {
+    text-align: left;
+    font-family: arial;
+}
+
+#cx2 {
+    /* background-color:aquamarine ; */
+    margin-top: 50px;
+    width:80%; 
+}
+
+#cx2 p {
+    /* background-color:aquamarine ; */
+    margin: 0 auto;
+    width: 100%;
+    margin-top: -30px;
+    font-size: 25px;
+    color: #ffffffec;
+    line-height: 30px;
+    /* font-weight: 600; */
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    text-shadow: 2px 1px 2px rgba(185, 172, 127, 0.822) ;
+}
+
+#btcaixas div{
+    text-decoration: none;
+    margin-bottom: 2%;
+}
+
+#btcaixa {
+    background-color: rgba(0, 0, 255, 0);
+    margin: 0 auto;
+    width: 58%;   
+}
+
+
+/* FIM APRESENTAÇÃO */
+
+/* INICIO MARKETIN */
+
+#marketing {
+    /* background-color: #000000; */
+    height: 800px;
+}
+
+#centro-mark {
+    /* background-color: #E9E245; */
+    margin: 95px auto;
+    width: 90%;
+    height: 100%;
+}
+
+#mkt-bloco {
+    /* background-color: aqua; */
+    height: 30%;
+    margin: 20px;
+}
+
+#mkt-bloco h3{
+    text-align: center;
+    font-size: 30px;
+    font-family: arial;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #9339F4;
+    text-transform: uppercase;
+}
+
+#cont-makt {
+    display: flex;
+    margin: 50px 0 0 0;
+    color: azure;
+    font-size: 20px;
+    font-family: arial;
+}
+
+#mkt-text-1 {
+    margin:30px 0 0 180px;
+    width: 50%;
+    text-align: right;
+    color: azure;
+}
+
+#img-makt-1 img {
+    margin: 0 60px 0 60px;
+    width: 100px;
+}
+
+#mkt-text-2 {
+    margin: 0 180px 0 0;
+    width: 50%;
+    text-align: left;
+    font-family: arial;
+    color: azure;
+}
+
+#img-makt-2 img {
+    margin: 0 60px 0 390px;
+    width: 100px;
+}
+
+
+#mkt-text-3 {
+    margin-left: 180px;
+    width: 50%;
+    text-align: right;
+    font-family: arial;
+    color: azure;
+}
+
+#img-makt-3 img {
+    margin: 0 0 0 60px;
+    width: 100px;
+}
+
+#final {
+    background-color: #9339F4;
+    height: 40px;
+}
+
+#rodape {
+    background-color: #454545;
+    height: 200px;
+}
+
+#navrodape {
+    /* background-color: aqua; */
+    margin: auto;
+    width: 13%;
+}
+
+#navrodape img {
+    margin: 10px;
+}
+
+#copy {
+    /* background-color: aquamarine; */
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+    color: white;
+}
