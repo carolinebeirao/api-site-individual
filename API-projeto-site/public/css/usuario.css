@@ -60,7 +60,7 @@ nav ul {
     margin-top: 10px;
     width: 100% ;
     /* background-color:#dfd519; */
-    height: 750px;
+    height: auto;
     display: flex;
 }
 
@@ -82,7 +82,7 @@ nav ul {
 }
 
 #menu-left {
-    /* background-color:rgba(255, 255, 255, 0); */
+    background-color:rgba(255, 255, 255, 0);
     height: 100%;
     width: 80%;
     padding-left: 2px ;
@@ -91,7 +91,7 @@ nav ul {
 
 #bloco-tit {
     margin-top: 80px ;
-    /* background-color: #caba7100; */
+    background-color: #caba7100;
     height: 50px;
 }
 
@@ -125,7 +125,7 @@ nav ul {
 /* LADO DIREITO CONTEUDO CRONOGRAMA */
 
 #rigth-red{
-    /* background-color: red; */
+    background-color: red;
     height: 80%;
     width: 80%;
 }
@@ -420,11 +420,18 @@ button:hover {
 /* DASH PROXIMOS E ATRASADOS */
 
 
+#lembretes {
+    margin-top: 100px;
+    background-color: #7e04f7;
+    height: 300px;
+
+}
+
 #baixo {
-    height: 50%;
+    height: 90%;
     display: flex;  
     margin: -10px 20px 10px 20px;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 #dash {
@@ -439,7 +446,7 @@ button:hover {
     font-family: arial;
     margin: 5px;
     font-size: 16px;
-    text-align: center;
+    text-align: left;
     color: #AA88FF
 }
 
@@ -462,7 +469,7 @@ button:hover {
     font-family: arial;
     margin: 5px; 
     font-size: 16px;
-    text-align: center;
+    text-align: left;
     color: #AA88FF
 ;}
 
@@ -470,30 +477,6 @@ button:hover {
     background-color:rgba(255, 255, 255, 0.158) ;
     border-radius: 5px;
     height: 85%;
-    width: 800%;
-}
-
-
-#atra {
-    /* background-color: rgb(67, 93, 116); */
-    height: 100%;
-    width: 30%;
-    margin: 10px;
-    color: #9339F4;
-}
-
-#atra h3 {
-    font-family: arial;
-    margin: 5px;
-    font-size: 16px;
-    text-align: center;
-    color: #AA88FF
-}
-
-#cx-atra {
-    background-color:rgba(255, 255, 255, 0.158) ;
-    border-radius: 5px;
-    height: 85%;
-    width: 95%;
+    width: 50%;
 }
 

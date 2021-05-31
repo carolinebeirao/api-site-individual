@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/usuario.css">
-    <!-- <script type="text/javascript" src="funcoes.js"></script> -->
+    <script type="text/javascript" src="funcoes.js"></script>
     <title>MYSTUDY.COM</title>
 </head>
 
@@ -43,9 +43,11 @@
         </div>
         <div id="rigth-red">
 
+           
             <div id="usuario-logado">
-                <div id="nome-usuario"> <b>Olá, </b><b id="b_usuario">nome aqui</b></div>
-                <div id="icone-notificação"><img src="/imagens/formabase.png" alt=""></div>
+                <div id="nome-usuario"><b id="b_usuario">NOME AQUI</b></div>
+                <div id="foto-usuario"><img src="/imagens/fotolucas.png" alt=""></div>
+                <div id="icone-notificação"><img src="/imagens/iconenotificacao.png" alt=""></div>
             </div>
 
             <h5>INSERIR NOVO TÓPICO </h5>
@@ -94,7 +96,8 @@
             <div id="meio">
                 <div id="caixa-meio">
                     <div id="tit-meio">
-                        <h3>MINHA SEMANA</h3>
+                        
+                        <h3  >MINHA SEMANA</h3>
                         <div id="cx-cronograma">
                             <div id="cx-dias">
                                 <div id="seg">
@@ -160,24 +163,30 @@
 
                 </div>
             </div>
+            
+        </div>
+    
+    </div>
+        <div id="lembretes">
             <div id="baixo">
 
                 <div id="prox">
-                    <h3>ALGUMA</h3>
+                    <h3>LEMBRETES</h3>
                     <div id="cx-prox"></div>
                 </div>
-                <div id="atra">
-                    <h3>COISA</h3>
-                    <div id="cx-atra"></div>
-                </div>
+               
                 <div id="dash">
-                    <h3>AQUI</h3>
+                    <h3>FRASE DO DIA</h3>
+                    <div id="cx-dash"></div>
+                </div>
+
+                <div id="dash">
+                    <h3>FRASE DO DIA</h3>
                     <div id="cx-dash"></div>
                 </div>
             </div>
         </div>
-
-    </div>
+    
 
 </body>
 
@@ -245,5 +254,7 @@
         }
 
     }
+
+    verificar_autenticacao();
 
 </script>
