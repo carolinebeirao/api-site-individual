@@ -69,13 +69,14 @@ nav ul {
 #left-barra {
     /* background-color: rgb(93, 93, 148); */
     width: 20%;
-    height: 100%;
+    height: auto;
     margin-right: 35px;
     display: flex;
 
 }
 
 #grade-left{
+    /* background-color: rgb(93, 93, 148); */
     background-image: url(/imagens/gradelarger.svg);
     height: 100%;
     width: 20%;
@@ -209,7 +210,7 @@ h5 {
 
 #assunto-topico {
     /* background-color: yellow; */
-    width: 50%;
+    width: 80%;
     padding: 7px 0 5px 0px;
     color: white;
     font-family: arial;
@@ -450,19 +451,22 @@ button:hover {
     color: #AA88FF
 }
 
-#cx-dash {
+#msgdodia {
     background-color:rgba(255, 255, 255, 0.158) ;
     border-radius: 5px;
     height: 85%;
-    width: 90%;
+    width: 95%;
     padding: 10px;
-    justify-content: space-between;
+    font-family: arial;
+    font-size: 16px;
+    color:#f0e2ff ;
+    justify-content: space-between;text-align: center;
 }
 
 #prox {
     /* background-color: rgb(67, 93, 116); */
     height: 100%;
-    width: 90%;
+    width: 30%;
     margin: 10px;  
 }
 
@@ -474,15 +478,16 @@ button:hover {
     color: #AA88FF
 ;}
 
-#cx-prox {
+#adicionalembrete {
     background-color:rgba(255, 255, 255, 0.158) ;
     border-radius: 5px;
     height: 85%;
-    width: 90%;
+    width: 95%;
     padding: 10px;
+    margin: 0;
 }
 
-#cx-prox p {
+#adicionalembrete p {
     color: white;
     font-family: arial;
 }
@@ -495,3 +500,28 @@ button:hover {
     padding: 10px;
 }
 
+#arealembrete {
+    width: 95%;
+    border-radius: 5px;
+}
+
+
+#arealembrete {
+    width: 95%;
+    border-radius: 5px;
+}
+
+#datalembrete {
+    width: 45%;
+    border-radius: 5px;
+    border: none ;
+    height: 30px;
+    color: #454545;
+}
+
+hr {
+    border-color: rgb(224, 189, 248) ;
+    width: thin 100%;
+    border: 2px dotted;
+    color: #454545
+}

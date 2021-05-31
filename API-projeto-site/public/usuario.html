@@ -43,7 +43,7 @@
         </div>
         <div id="rigth-red">
 
-           
+
             <div id="usuario-logado">
                 <div id="nome-usuario"><b id="b_usuario">NOME AQUI</b></div>
                 <div id="foto-usuario"><img src="/imagens/fotolucas.png" alt=""></div>
@@ -53,9 +53,7 @@
             <h5>INSERIR NOVO TÓPICO </h5>
             <div id="top">
 
-                <form id="form_cadastrartopico" method="post" onsubmit="return cadastrartopico()"></form>
-
-
+                <form id="form_cadastrartopico" method="post"></form>
                 <div id="disciplina-topico">
                     <p>Disciplina</p>
                     <textarea id="ndisciplina" placeholder="nome da disciplina"></textarea>
@@ -85,19 +83,13 @@
                 <button onclick="bt_cadastrar()">ADICIONAR</button>
                 </form>
 
-                <!-- <div id="msg">
-                    <div id="disciplina"></div>
-                    <div id="Assunto"></div>
-                    <div id="titulo"></div>
-                    <div id="descricao"></div>
-                </div> -->
 
             </div>
             <div id="meio">
                 <div id="caixa-meio">
                     <div id="tit-meio">
-                        
-                        <h3  >MINHA SEMANA</h3>
+
+                        <h3>MINHA SEMANA</h3>
                         <div id="cx-cronograma">
                             <div id="cx-dias">
                                 <div id="seg">
@@ -163,44 +155,46 @@
 
                 </div>
             </div>
-            
+
         </div>
-    
+
     </div>
-        <div id="lembretes">
-            <div id="baixo">
+    <div id="lembretes">
+        <div id="baixo">
 
-                <div id="prox">
-                    <h3>ADICIONAR LEMBRETE</h3>
-                    <div id="cx-prox">
-                        <!-- <form id="form_cadastrartopico" method="post" onsubmit="return cadastrartopico()"></form> -->
-                        <div id="lembrete-topico">
-                            <p>Digite o lembrete</p>
-                            <textarea id="" placeholder="lembretes"></textarea>
-                        </div>
-                        <div id="assunto-topico">
-                            <p>Assunto</p>
-                            <input type="date" id="data-lembrete"></input>
-                        </div>
-                        <button onclick="bt_cadastrar_lembrete()">ADICIONAR</button>
-                        </form>
+            <div id="prox">
+                <h3>ADICIONAR LEMBRETE</h3>
+                <div id="adicionalembrete">
+                    <!-- <form id="form_cadastrartopico" method="post" onsubmit="return cadastrarlembrete()"></form> -->
+                    <div id="lembrete-topico">
+                        <p>O que você deseja lembrar ?</p>
+                        <textarea id="arealembrete" placeholder="digite aqui"></textarea>
                     </div>
-                </div>
-                <div id="prox">
-                    <h3>LEMBRETES</h3>
-                    <div id="msglembrete"></div>
-                </div>
-               
-                <div id="dash">
-                    <h3>FRASE DO DIA</h3>
-                    <div id="cx-dash">
-                       
+                    <div id="lembrete-topico">
+                        <p>Quando ?</p>
+                        <input type="date" id="datalembrete"></input>
                     </div>
+                    <button onclick="bt_cadastrarlembrete()">ADICIONAR</button>
+                    </form>
                 </div>
-
             </div>
+            <div id="prox">
+                <h3>LEMBRETES</h3>
+                <div style=" color: rgb(250, 213, 92); font-family: arial; justify-content: space-between;" id="msglembrete">
+                   
+                </div>
+            </div>
+
+            <div id="dash">
+                <h3>FRASE DO DIA</h3>
+                <div id="msgdodia">
+                    <br> <br> <br> <br> O primeiro pecado da humanidade foi a fé;<br> a primeira virtude foi a dúvida. ... <br> <br> Carl Sagan -
+                </div>
+            </div>
+
         </div>
-    
+    </div>
+
 
 </body>
 
@@ -231,22 +225,22 @@
         }
 
 
-        
+
         //dia da semana que sera cadastrado
         if (dia == 'seg1') {
-            msgseg.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
+            msgseg.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><hr>`;
         } else if (dia == 'ter1') {
-            msgter.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
+            msgter.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><hr>`;
         } else if (dia == 'qua1') {
-            msgqua.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
+            msgqua.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><hr>`;
         } else if (dia == 'qui1') {
-            msgqui.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
+            msgqui.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><hr>`;
         } else if (dia == 'sex1') {
-            msgsex.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
+            msgsex.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><hr>`;
         } else if (dia == 'sab1') {
-            msgsab.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
+            msgsab.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><hr>`;
         } else if (dia == 'dom1') {
-            msgdom.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><br>`;
+            msgdom.innerHTML += `<div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${disciplina} </span>  <span style="font-size: 14px; color: #126ee7;">  ${assunto}</span> </div> <br> <span style="font-size: 16px;"> ${titulo}</span>  <br><br> <span style="font-size: 14px;">${descricao}  </span> <br><hr>`;
         }
 
         //Limpando inputs e innerHTML de disciplinas para não repetir
@@ -266,6 +260,13 @@
                         </div>
                     </div>`;
         }
+
+    }
+
+    function bt_cadastrarlembrete() {
+        var lembrete = arealembrete.value;
+        var data = datalembrete.value;
+        msglembrete.innerHTML += ` <div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:white;">  ${lembrete} </span>  <span style="font-size: 14px; color:#e46c6c;">  ${data}</span> </div> <hr>`;
 
     }
 
