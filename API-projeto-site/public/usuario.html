@@ -13,44 +13,55 @@
 <body>
 
     <div id="caixatotal">
+
+        <!-- CAIXA ESQUERDA, ONDE APARECERA AS DISCILINAS CADASTRADAS -->
         <div id="left-barra">
+
+            <!-- GRADE QUE DA ESTILO NA LATERAL -->
             <div id="grade-left">
             </div>
 
+            <!-- ONDE APARECERÁ AS DISCIPLINAS CADASTRADAS -->
             <div id="menu-left">
                 <div id="caixa">
                     <nav id="nav1">
                         <img src="./imagens/chapeubranco.svg" alt="" width="25px">
                         <span id="navleft">
+                            <a href="./blog.html">
+                                <li>Blog </li>
+                            </a>
                             <a href="./index.html">
-                                <li onclick="logoff()" >Desconectar</li>
-                                
+                                <li onclick="logoff()">Desconectar</li>
                             </a>
                         </span>
                     </nav>
                 </div>
+
+                <!-- TITULO DO BLOCO -->
                 <div id="bloco-tit">
                     <h3>DISCILINAS</h3>
                 </div>
+
+                <!-- INNER HTML -->
                 <div id="blocodisciplina">
-
                 </div>
-
-
             </div>
         </div>
+
+        <!-- CAIXA DIREITS, AGLOBA OS CADASTROS DE CONTEUDO E CRONOGRAMA SEMANAL -->
         <div id="rigth-red">
 
-
+            <!-- PARTE SUPERIOR COM NOME DE USUARIO E FOTO -->
             <div id="usuario-logado">
                 <div id="nome-usuario"><b id="b_usuario">NOME AQUI</b></div>
-                <div id="foto-usuario"><img src="/imagens/fotolucas.png" alt=""></div>
+                <div id="foto-usuario"><img src="/imagens/carolroxo.png" alt=""></div>
                 <div id="icone-notificação"><img src="/imagens/iconenotificacao.png" alt=""></div>
             </div>
 
             <h5>INSERIR NOVO TÓPICO </h5>
+            
+            <!-- PARTE DE CADASTRAR TOPICO -->
             <div id="top">
-
 
                 <div id="disciplina-topico">
                     <p>Disciplina</p>
@@ -68,6 +79,7 @@
                     <p>descrição do topico</p>
                     <textarea id="dtopico" placeholder="descrição do topico"></textarea>
                 </div>
+
                 <select id="sdia">
                     <option value="">selecionar dia</option>
                     <option value="seg1">Segunda</option>
@@ -78,18 +90,21 @@
                     <option value="sab1">Sabado</option>
                     <option value="dom1">Domingo</option>
                 </select>
+
                 <button onclick="bt_cadastrar()">ADICIONAR</button>
 
-
-
             </div>
+
+            <!-- PARTE DO CRONOGRAMA SEMANAL -->
             <div id="meio">
                 <div id="caixa-meio">
                     <div id="tit-meio">
 
                         <h3>MINHA SEMANA</h3>
+
                         <div id="cx-cronograma">
                             <div id="cx-dias">
+
                                 <div id="seg">
                                     <h4>segunda</h4>
                                     <div id="cx-conteudo">
@@ -98,6 +113,7 @@
                                         <br>
                                     </div>
                                 </div>
+
                                 <div id="ter">
                                     <h4>terca</h4>
                                     <div id="cx-conteudo">
@@ -106,6 +122,7 @@
                                         <br>
                                     </div>
                                 </div>
+
                                 <div id="qua">
                                     <h4>quarta</h4>
                                     <div id="cx-conteudo">
@@ -114,6 +131,7 @@
                                         <br>
                                     </div>
                                 </div>
+
                                 <div id="qui">
                                     <h4>quinta</h4>
                                     <div id="cx-conteudo">
@@ -122,6 +140,7 @@
                                         <br>
                                     </div>
                                 </div>
+
                                 <div id="sex">
                                     <h4> sexta </h4>
                                     <div id="cx-conteudo">
@@ -130,6 +149,7 @@
                                         <br>
                                     </div>
                                 </div>
+
                                 <div id="sab">
                                     <h4> sabado </h4>
                                     <div id="cx-conteudo">
@@ -146,6 +166,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
 
                         </div>
@@ -155,14 +176,18 @@
             </div>
 
         </div>
-
     </div>
+
+    <!-- CAIXA DE BAIXO -->
     <div id="lembretes">
         <div id="baixo">
-            <div id="prox">
-                <h3>ADICIONAR LEMBRETE</h3>
-                <div id="adicionalembrete">
 
+            <!-- ADICIONA LEMBRETE -->
+            <div id="prox">
+
+                <h3>ADICIONAR LEMBRETE</h3>
+
+                <div id="adicionalembrete">
                     <div id="lembrete-topico">
                         <p>O que você deseja lembrar ?</p>
                         <textarea id="arealembrete" placeholder="digite aqui"></textarea>
@@ -172,37 +197,36 @@
                         <input type="date" id="datalembrete"></input>
                     </div>
                     <button onclick="bt_cadastrarlembrete()">ADICIONAR</button>
-
                 </div>
+
             </div>
+
+            <!-- APARECE LEMBRETE -->
             <div id="prox">
                 <h3>LEMBRETES</h3>
                 <div style=" color: rgb(250, 213, 92); font-family: arial; justify-content: space-between;"
                     id="msglembrete">
-
                 </div>
             </div>
+
+            <!-- APARECE FRASE DO DIA -->
             <div id="dash">
                 <div style="display: flex;">
                     <h3>FRASE DO DIA</h3>
-                    <button onclick="sortear()" id="sort">VER</button>
                 </div>
-
                 <div id="msgdodia">
-                    <br> <br> <br> <br> há uma frase te esperando hoje. ... <br> <br>
+                    <br> <br> <br> <br> há uma frase te esperando hoje. ... <button onclick="sortear()"
+                        id="sort">VER</button><br> <br>
                 </div>
             </div>
+
         </div>
     </div>
+    <!-- RODAPÉ -->
     <div id="rodape">
-        <div>
-
-        </div>
-
         <div id="copy">
             <p>Copyright © 2021, Caroline Beirão. Bandtec.</p>
         </div>
-
     </div>
 
 </body>
@@ -283,8 +307,8 @@
 
     //soteio de frase do dia
     function sortear() {
-        var aleatorio = parseInt((Math.random()*10)+1);
-        
+        var aleatorio = parseInt((Math.random() * 10) + 1);
+
         if (aleatorio == 1) {
             msgdodia.innerHTML = `<br> <br> <br> <br>  “O que sabemos é uma gota; o que ignoramos é um oceano.” <br> <br> Isaac Newton:`;
         } else if (aleatorio == 2) {

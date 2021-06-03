@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body>
+
+    <div id="caixanav">
+        <nav id="nav1">
+            <img src="./imagens/chapeubranco.svg" alt="" width="25px">
+            <span id="navleft">
+                <a href="./USUARIO.html">
+                    <li>Voltar para o painel </li>
+                </a>
+                <a href="./index.html">
+                    <li onclick="logoff()">Desconectar</li>
+                </a>
+            </span>
+        </nav>
+        <nav id="nav2">
+            <ul>
+                <a href="">
+                    <img id="rsocial" src="./imagens/facebookroxo.svg" alt="">
+                </a>
+                <a href="">
+                    <img id="rsocial" src="./imagens/instagramroxo.svg" alt="">
+                </a>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <div id="blocox">
+        <div id="blocoTITULO2">
+
+            <h3>veja aqui algumas dicas para turbinar a sua estratégia!</h3>
+            <div id="bloco1esquerda">
+
+                <div onclick="planejamento()" id="bloquinhoroxo">
+                    Planejamento
+                </div>
+                <div onclick="metodo()" id="bloquinhoroxo">
+                    Método
+                </div>
+                <div onclick="disciplina()" id="bloquinhoroxo">
+                    Disciplina
+                </div>
+            </div>
+        </div>
+        <div id="bloco1grade">
+        </div>
+
+        <div id="bloco1direita">
+            <div id="msgbloco1direita">
+                <div id="titestrat">
+                    <h1>Para ter um bom desempenho é importante seguir uma boa estratégia!</h1>
+                </div>
+                <div id="planum" style="display: none;">
+
+                    <b> Planejamento </b>
+                    <br><br>
+                    "Ato de projetar um trabalho, serviço... Determinação dos objetivos ou metas de um
+                    empreendimento,
+                    como também da coordenação de meios e recursos para atingi-los
+                    <br><br>
+                    <b>Qual é o maior desafio / problema que você, como estudante, tem que vencer / resolver ? </b>
+                    <br><br>
+                    A resposta é muito simples: é a sua formação / capacitação.
+                    <br>
+                    Isso é tão verdade que você está disposto a investir anos da sua vida nessa tarefa.
+                    E não basta ter um histórico escolar cheio de aprovações, ou um diploma dizendo que você está
+                    capacitado.
+                    Um diploma pode abrir as portas, mas o sucesso só é alcançado através da sua competência.
+                    E ninguém nasce competente...isso é construído com muito esforço e suor.
+                    <br>
+                    Portanto não basta assistir aulas e fazer provas de maneira passiva e automática.
+                    É necessário ter uma postura ativa perante a própria formação.Seja o protagonista da sua
+                    capacitação.
+
+                </div>
+                <div id="plandois" style="display: none;">
+                    <b>Como vencer esse desafio(de maneira eficiente) ? </b>
+                    <br><br>
+                    Primeiramente descubra o que você precisa saber / conhecer / dominar.
+                    (No caso de uma gradução, existem documentos que determinam os objetivos do curso, delineiam seu
+                    formato e determinam sua matriz curricular.Ler esses documentos é fundamental.)
+
+                    Saiba "de cabo a rabo" como é a matriz curricular do seu curso.Cada conteúdo está
+                    ali por um motivo, e você precisa saber todos eles.Não subestime nenhum deles.
+
+                    Colocar "em cima de uma mesa" tudo que você precisa saber / conhecer / dominar
+                    é crucial para que você possa se organizar e traçar metas.Sem metas é impossível [
+                    organizar o tempo, e assim não haverá planejamento nenhum.`;
+                </div>
+                <div id="metdum" style="display: none;">
+                    Método
+                    <br>
+                    <br>
+                    "Conjunto dos meios dispostos convenientemente para alcançar um fim e especialmente para chegar a um
+                    conhecimento científico ou comunicá-lo aos outros. Ordem ou sistema que se segue no estudo ou no
+                    ensino de qualquer disciplina. Maneira sistemática de dispor as matérias de um livro. Maneira de
+                    fazer as coisas; modo de proceder."
+                    Como executar essas metas (i.e., estudar os conteúdos do curso de maneira eficiente)?
+                    A resposta é: "Dividir para conquistar" (no contexto do merge sort, de John von Neumann).
+                    <br><br>
+                    O curso é dividido em períodos e conteúdos, e os conteúdos em aulas. As aulas usam livros que são
+                    divididos em capítulos, e os capítulos em seções.
+                    <br><br>
+                    Faça uma lista do que precisa ser estudado naquela semana, em ordem de prioridade e importância, e
+                    estude uma seção de cada vez.
+
+                </div>
+                <div id="doismtd" style="display: none;">
+                    Mas estude de maneira intercalada. Lembre-se que os conteúdos são interrelacionados (apesar das
+                    disciplinas quase sempre serem ministradas como se nada tivesse conexão). Lembre-se que um conteúdo
+                    é pré-requisto ou co-requisto de outro (por isso seu planejamento deve ser feito com uma visão ampla
+                    da matriz).
+                    <br>
+                    Intercalar as disciplinas também aumenta o rendimento de estudos (está dando tempo ao cérebro "se
+                    acostumar" com o conteúdo), e para garantir que você não está deixando nada de lado.
+                    <br><br>
+                    <b>Divida seu tempo de estudos em blocos de 20 a 40 minutos, e faça intervalos de ~5 minutos. </b>
+                    <br><br>
+                    A curva de rendimento varia de pessoa para pessoa, e depende da base (pré-requisitos), familiaridade
+                    com o conteúdo, estado de tranquilidade (ou ansiedade), saúde, se a pessoa está bem hidratada e
+                    alimentada, confortável...
+
+
+                </div>
+                <div id="metdtres" style="display: none;">
+                    Apesar de todas essas variáveis, uma coisa é certa: depois de um tempo de esforço, o rendimento
+                    diminui. E quanto mais tempo você estuda em baixo rendimento, mais tempo você desperdiça.
+                    <br><br>
+                    Uma estratégia para maximizar o rendimento é subdivir o tempo em blocos mais curtos, e fazer pausas
+                    antes que o rendimento diminua. Esse intervalo é útil para "reenergizar a mente", "acalmar o
+                    espírito", tomar um café, uma água, esticar as pernas, "circular o sangue" e "dar um tempo pra
+                    cabeça". Após esse intervalo, um novo bloco se inicia, e facilmente o rendimento volta ao máximo.
+                    <br><br>
+                    <b>Estude pelo menos 3 disciplinas diferentes no mesmo dia, intercaladamente, e todas as disciplinas
+                        a cada 2 dias.</b>
+                    <br><br>
+                    Quanto maior a frequência que você volta na disciplina, maior será seu rendimento.
+                </div>
+                <div id="metdquatro" style="display: none;">
+                    Não passe mais que duas horas com a mesma disciplina. Por exemplo, se tiver uma tarde inteira para
+                    estudar, troque de disciplina a cada duas horas.
+                    Dessa forma você irá otimizar seus estudos, e nunca irá acumular nenhum conteúdo de nenhuma
+                    disciplina, e portanto nunca precisará "priorizar" (largar uma disciplina para estudar outra).
+                    <br><br>
+                    <b>Quais são os procedimentos que você deve executar para estudar um conteúdo?</b>
+                    <br><br>
+                    1° Assistir aula.
+                    Esse é o primeiro contato com o conteúdo, útil para se familiarizar com os conceitos
+                    Lembre-se que o objetivo da aula é "ensinar ao aluno o que ele deve estudar depois"
+                    <br><br>
+                    2 °Ler o capítulo do livro transcrevendo em papel as ideias e exemplos mais importantes
+                    Uma vez que o aluno já está familiarizado com o conteúdo (assistiu a aula), o estudo se torna mais
+                    "fácil"
+                    A "leitura com transcrição" deve ser feita no mesmo dia da aula para maior eficiência
+                    Lembre-se que estudar é muito mais do que ler e ler não significa necessariamente "compreender o que
+                    está escrito"
+                    Se tiver tempo, leia o conteúdo em mais de um livro
+                    Se não tiver tempo, leia o livro na cama, antes de dormir
+                </div>
+                <div id="metdcinco" style="display: none;">
+
+                    3° DORMIR (sim, você precisa dormir no mesmo dia que assistiu a aula e estudou/transcreveu os
+                    conceitos
+                    mais importantes do capítulo)
+                    O cérebro é um "computador biológico" que utiliza a fase do sono para "desfragmentar" e organizar a
+                    informação
+                    Durante o sono as redes neurais são reestruturadas, e a parte da informação estudada no dia é
+                    registrada
+                    permanentemente
+                    Virar a noite para "estudar" é uma idiotice, pois a informação é perdida (no semestre seguinte o
+                    aluno
+                    não lembra o que estudou)
+                    <br><br>
+                    4° Fazer um resumo do capítulo (escrever no caderno), até um dia depois da aula.
+                    Não transcreva o livro inteiro!! O resumo deve incluir apenas:
+                    Palavras/conceitos-chave (normalmente os títulos e palavras destacadas)
+                    Figuras e gráficos (explique eles)
+                    Equações (explique cada variável e constante)
+                    Teoremas e definições
+                    Deduções, provas, e sequências de passagens
+                    Mapas mentais, esquemas lógicos, estruturas relacionais
+                    Copie e entenda todos os exemplos
+                    Faça o resumo como se uma terceira pessoa fosse estudar por ele
+                    <b>Se você só usa o caderno em aula, provavelmente seu rendimento nos estudos é inferior do que
+                        poderia
+                        ser.</b>
+                    <br><br>
+                    A eficiência desse sistema é inversamente proporcional ao número de dias que separa a aula do
+                    resumo.
+                </div>
+                <div id="metdseis" style="display: none;">
+
+                    5° Fazer os exercícios mais simples ("substituição de fórmula"), até dois dias depois da aula.
+                    Sempre que puder, aprenda a deduzir fórmulas, e nunca decorá-las
+                    Evite usar o solucionário nessa etapa
+                    Tente rededuzir as fórmulas sempre que necessário
+                    <br><br>
+                    6° Finalmente fazer os exercícios mais complexos, ao longo dos dias, até a próxima aula.
+                    Este é o momento mais propício para a informação se cristalizar em conhecimento, e o aprendizado em
+                    compreensão.
+                    O ideal é fazer de 5 a 10 exercícios por dia. Mais que isso desperdiça treinamento, e menos não tem
+                    efeito.
+                    "Tempo é dinheiro"
+                    Faça os exercícios algebricamente (evite substituir valores antes do fim do problema)
+                    Utilize uma planilha eletrônica ou calculadora para substituir os valores das respostas
+                    (ou simplesmente estime o resultado)
+                    Evite ao máximo utilizar o solucionário
+                    (é como ir para a academia com um instrutor, e ele fazer os exercícios para você)
+                    Não gaste mais que 10 minutos em um exercício. Se travar, dê uma pausa (5 min) e depois volte, ou
+                    pule
+                    ele. Se passar de 15 minutos travado, deixe ele de lado e vá tirar dúvida sobre ele com o professor
+                    ou o
+                    monitor
+                    Não esqueça que dormir bem é fundamental para registrar as informações permanentemente no cérebro
+                    <br><br>
+                    Lembre-se que seguir esses passos não significa que você finalmente alcançou a compreensão.
+                    Significa apenas que você está bem treinado em determinado conteúdo. Muitas vezes a compreensão só é
+                    alcançada quando determinado conteúdo é encadeado e relacionado com outros conteúdos (anteriores ou
+                    posteriores), e essa maturidade pode levar tempo para acontecer.
+                </div>
+                <div id="metdsete" style="display: none;">
+                    <b>O que fazer se você não tiver a base ou o tempo para estudar?</b>
+                    <br><br>
+                    Você terá que eleger prioridades, e fazer o que puder. Algumas coisas você terá que se aprofundar
+                    menos,
+                    mas com a consciência que em algum momento futuro você poderá pagar o preço por não dominar
+                    completamente aquele conteúdo.
+                    <br><br>
+                    Se for uma problema de base, e isto estiver lhe dificultando demais acompanhar as aulas e entender
+                    os
+                    livros, inevitavelmente você terá que investir algum tempo revertendo isso. Você terá que dar um
+                    passo
+                    atrás, e estudar os pré-requisitos daquele conteúdo. Sem dúvida alguma, isso poderá atrasar sua
+                    formação. Mas é infinitamente melhor atrasar de maneira controlada, consciente e planejada, do que
+                    passar o curso inteiro tropeçando.
+                </div>
+                <div id="discmsg" style="display: none;">
+                    <b>Disciplina</b>
+                    <br> <br>
+                    "Relação de submissão de quem é ensinado, para com aquele que ensina; observância de preceitos ou
+                    ordens escolares..."
+                    <br><br>
+
+                    <b>Mas e a motivação (para fazer esse planejamento e seguir esse método)?</b>
+                    <br><br>
+                    Se você só planejar/estudar quando estiver motivado (com o trabalho ou o conteúdo), então saiba que
+                    você não está investindo tempo, mas sim desperdiçando. Muito provavelmente você está fadado ao
+                    fracasso.
+                    <br><br>
+                    Quando você se perguntar: "Por que estou fazendo isso?", você vai responder para si mesmo: "Porque
+                    sim. Porque eu escolhi esse caminho." E então você vai fazer o que tiver que fazer.
+                    <br><br>
+                    A motivação não deve ser um princípio para começar a trabalhar nos seus projetos. Você deve traçar
+                    metas e cumprir elas a todo custo, mesmo que isso envolva um pouco de sofrimento.
+                    <br><br>
+                    Quando você começar a cumprir as metas que você pré-determinou, naturalmente você se sentirá
+                    motivado (sentirá o prazer da conquista e da vitória). Esse será um importante combustível para
+                    aumentar a sua dedicação e a sua disciplina, e fará com que você alcance mais rápido seus objetivos.
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="setas">
+            <img onclick="ant()" id="asetaleft" src="./imagens/left.svg" alt="" style="display: none ; width: 50px;">
+            <img onclick="prox()" id="asetarigth" src="./imagens/rigth.svg" alt="" style="display: none; width: 50px; ">
+        </div>
+        <div id="mtdseta" style="display: none;">
+            <img onclick="metdant()" id="metdsetaleft" src="./imagens/left.svg" alt=""
+                style="display: none ; width: 50px;">
+            <img onclick="metdprox()" id="metdsetarigth" src="./imagens/rigth.svg" alt=""
+                style="display: none; width: 50px; ">
+        </div>
+        <div id="mtddoisseta" style="display: none;">
+            <img onclick="metd2ant()" id="metd2setaleft" src="./imagens/left.svg" alt=""
+                style="display: none ; width: 50px;">
+            <img onclick="metd2prox()" id="metd2setarigth" src="./imagens/rigth.svg" alt=""
+                style="display: none; width: 50px; ">
+        </div>
+        <div id="mtdtresseta" style="display: none;">
+            <img onclick="metd3ant()" id="metd3setaleft" src="./imagens/left.svg" alt=""
+                style="display: none ; width: 50px;">
+            <img onclick="metd3prox()" id="metd3setarigth" src="./imagens/rigth.svg" alt=""
+                style="display: none; width: 50px; ">
+        </div>
+        <div id="mtdquatroseta" style="display: none;">
+            <img onclick="metd4ant()" id="metd4setaleft" src="./imagens/left.svg" alt=""
+                style="display: none ; width: 50px;">
+            <img onclick="metd4prox()" id="metd4setarigth" src="./imagens/rigth.svg" alt=""
+                style="display: none; width: 50px; ">
+        </div>
+        <div id="mtdcincoseta" style="display: none;">
+            <img onclick="metd5ant()" id="metd5setaleft" src="./imagens/left.svg" alt=""
+                style="display: none ; width: 50px;">
+            <img onclick="metd5prox()" id="metd5setarigth" src="./imagens/rigth.svg" alt=""
+                style="display: none; width: 50px; ">
+        </div>
+        <div id="mtdseisseta" style="display: none;">
+            <img onclick="metd6ant()" id="metd6setaleft" src="./imagens/left.svg" alt=""
+                style="display: none ; width: 50px;">
+            <img onclick="metd6prox()" id="metd6setarigth" src="./imagens/rigth.svg" alt=""
+                style="display: none; width: 50px; ">
+        </div>
+        <div id="setadisciplina" style="display: none;">
+            <img onclick="discipant()" id="discisetaleft" src="./imagens/left.svg" alt=""
+                style="display: none ; width: 50px;">
+            <img onclick="disciprox()" id="discisetarigth" src="./imagens/rigth.svg" alt=""
+                style="display: none; width: 50px; ">
+        </div>
+
+    </div>
+    </div>
+
+    <div id="blocoTITULO">
+        <h1>Cansado de estudar sempre com as mesmas técnicas <br> e ansioso para conhecer novos métodos de estudo?</h1>
+        <h4>escolha uma opção abaixo para visualizar </h4>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div id="blocos">
+        <div onclick="pomodoro()" id="bloquinho">
+            Técnica Pomodoro
+        </div>
+        <div onclick="robson()" id="bloquinho">
+            Método Robinson (EPL2R)
+        </div>
+        <div onclick="mapa()" id="bloquinho">
+            Mapa mental
+        </div>
+        <div onclick="autoexplicacao()" id="bloquinho">
+            Autoexplicação
+        </div>
+        <div onclick="simulacoes()" id="bloquinho">
+            Simulações cronometradas
+        </div>
+    </div>
+    <div id="blocos" style="display: none;">
+        <div id="bloquinho">
+            Autointerrogação
+        </div>
+        <div id="bloquinho">
+            Estudo intercalado
+        </div>
+        <div id="bloquinho">
+            Fichamento ou resumo
+        </div>
+        <div id="bloquinho">
+            Releitura
+        </div>
+        <div id="bloquinho">
+            Gravações de áudio
+        </div>
+    </div>
+    <br>
+    <div id="textoclick">
+        <div id="textfundo">
+            <b>Quais são os métodos de estudo?</b>
+            <br><br>
+            São vários os métodos de estudo que você pode utilizar.
+            <br><br>
+            Para escolher, leve em conta o seu perfil e as necessidades. Ou seja, de que forma pretende aproveitar o
+            conhecimento adquirido.
+            <br><br>
+            E não se esqueça, é claro, de analisar as opções.
+            <br><br>
+            Para esse passo, a gente dá uma ajudinha.
+            <br><br>
+            Confira alguns dos principais métodos de estudo!
+        </div>
+        <div id="pomodoroo" style="display: none;">
+            A técnica Pomodoro é, na verdade, um método de gestão de tempo, e um dos mais conhecidos.
+            <br><br>
+            Pode ser aplicado para diversas finalidades, inclusive nos estudos, onde tem mostrado grandes resultados.
+            Ela consiste em estabelecer 25 minutos para o exercício da atividade e 15 minutos de descanso.
+            Ou seja, você estuda no maior tempo, e usa o outro período para recuperar o fôlego. Depois, repete esse
+            fluxo várias vezes.
+            <br><br>
+            Para colocar a técnica Pomodoro em prática, você vai precisar de um cronômetro, ok?
+            E, se quiser, pode tentar espaçar mais. Em vez de 25 minutos, teste estudar direto por 45 minutos, por
+            exemplo.
+            O ideal é que intercale sempre os períodos de dedicação com os de descanso, mas os minutos é você quem
+            decide.
+        </div>
+        <div id="robsonn" style="display: none;">
+            Se você ficou curioso para saber o que significa a sigla EPL2R, já vamos explicar.
+            <br><br>
+            Veja só:
+            <br>
+            E: Explorar
+            <br>
+            P: Perguntar
+            <br>
+            L: Ler.
+            <br>
+            2R: Rememorar e Repassar.
+            <br>
+            <br>
+            Cada termo desse acrônimo é uma etapa, na qual devem ser tomadas ações específicas.
+            Na primeira, é necessário explorar todo o conteúdo.
+            Isto é, investigar tudo sobre a obra e o autor.
+            Depois, inicia-se a fase das perguntas.
+            É hora, então, de levantar todas as dúvidas sobre o assunto a ser estudado.
+            O terceiro passo consiste em uma leitura mais aprofundada do material.
+            Percorra as linhas com bastante cuidado.
+            Feito isso, é a vez do primeiro R, de Rememorar. Aqui, o intuito é se certificar de que o aprendizado foi
+            realmente fixado.
+            <br><br>
+            Por último, você deve repassar tudo o que estudou.
+            Nessa etapa, é preciso fazer uma espécie de análise bem minuciosa, com resumos, anotações e desenhos.
+            Vale também conversar com outras colegas.
+            Quem sabe, assim, consegue agregar ainda mais conhecimento.
+        </div>
+        <div id="mpmental" style="display: none;">
+            Quem adora aplicar métodos de estudo, certamente, vai ver o mapa mental com bons olhos.
+            <br><br>
+            Afinal, com tantas cores e formas, é difícil não se encantar por eles.
+            Essa técnica bastante visual, que funciona como uma espécie de ramificações, ajuda o cérebro a memorizar e
+            assimilar o conteúdo com mais facilidade.
+            Ao centro de uma folha de papel, deve-se escrever o tema estudado. De preferência, com a cor preta. Por
+            exemplo: Roma Antiga.
+            <br>
+            <br>
+            Em volta, é preciso colocar os subtemas. Ou seja, os tópicos relevantes do assunto.
+            No caso do exemplo, poderia ser Império, Monarquia, República e por aí vai.
+            O ideal é escrever cada um deles com cores diferentes. E a fonte também deve ser menor do que o tamanho
+            usado para designar o tema central.
+            Então, embaixo dos subtemas, lista-se as informações mais importantes sobre eles.
+            Imagens e desenhos complementam o mapa mental.
+        </div>
+        <div id="autoex" style="display: none;">
+            Imagine-se como um professor e tente dar uma aula para si mesmo. <br>
+            É assim que funciona o método de autoexplicação. <br>
+            Quando você fala em voz alta, é capaz de reconhecer mais facilmente o raciocínio que foi criado. <br>
+            Além disso, é uma técnica que ajuda a memorizar. <br>
+        </div>
+        <div id="simula" style="display: none;">
+            Você, certamente, já fez alguma apresentação com tempo para ser cumprido.
+            Então, sabe que é um desafio enorme se manter entre os minutos determinados.
+            Mas a missão pode ser mais simples se você apostar em simulações cronometradas.
+            Isso significa fazer testes calculando o tempo gasto e organizando melhor as suas falas.
+        </div>
+    </div>
+
+    <div id="aprender">
+        <h1>Aprender, desaprender e reaprender!</h1>
+        <h3>“O analfabeto do século XXI não será aquele que não consegue ler e escrever, mas aquele que não consegue
+            aprender, desaprender e reaprender.”</h3>
+        <div id="textoaprender">
+            em tempos de pandemia em que é necessário a adaptabilidade, flexibilidade, multitarefas, organização do
+            tempo, produtividade, equilíbrio, inteligência emocional e por aí vai. São tantas habilidades que
+            necessitamos e ainda venho com a sugestão acima: aprender, desaprender e reaprender.
+            <br>
+            Pois bem, em nossa educação e aprendizados, o que deve permanecer? Você já parou para pensar que estamos em
+            constante mudança e precisamos aprender a todo momento e de forma ágil. O que precisamos para aprender? Tem
+            uma ótima analogia da poeta Adélia Prado: “Nem a faca nem o queijo; eu quero a fome”, o que precisamos para
+            aprender é o desejo.
+            <br>
+            Em quais momentos que mais aprendemos? É no mar calmo ou na tempestade? No ordinário ou no extraordinário?
+            Podemos considerar que estamos em um tempo propício a aprender. Nós já sabemos como lidar com algumas
+            situações adversas, mais esse impacto de guerra sanitária ainda não tínhamos vivido com tamanha intensidade.
+            E o que podemos aprender?
+            <br><br><br>
+            E desaprender? Algumas ações feitas anteriormente deram certo, mas hoje se aplicadas podem não funcionar,
+            estamos constantemente mudando a forma de soluções e precisamos ter ciência que nem toda mudança trará
+            melhorias, no entanto, para a melhoria acontecer é necessário mudar e inovar constantemente.
+
+            Com estas mudanças constantes precisamos de um mindset de crescimento, inclusive alguns recrutadores
+            utilizam de perguntas para saber como é o seu mindset, pois a capacidade de aprender costuma ter mais
+            sucesso que a pessoa que já aprendeu tudo e só “tem” a ensinar.
+            <br>
+            A mensagem que levo desta reflexão é, por mais que tenhamos muitos títulos acadêmicos e experiências, em
+            determinado momento alguns aprendizados precisam ser descartados e cria-se um novo aprendizado, precisamos
+            buscar constantemente atualizações, estudando não apenas a área de atuação, pois estas sinapses são
+            importantes para o desenvolvimento do nosso cérebro e da nossa capacidade de evoluir, as máquinas não
+            substituem isso!
+            <br>
+            Para finalizar, vou deixar algumas sugestões para desaprender:
+            <br><br><br>
+            Perceba se tem algum problema que ao utilizar a mesma técnica que anteriormente funcionava, desta vez
+            falhou.
+            Pense sobre as suas crenças, o que te impede de aprender mais, algo que você aprendeu no passado tem
+            limitado o seu aprendizado presente?
+            Você se sente confortável com os aprendizados e capaz de resolver qualquer problema da sua área?
+            E reaprender:
+            <br><br><br>
+            Utilize de algumas ferramentas para encontrar novas soluções.
+            Evite pensar sozinho, compartilhe com alguém ou com a equipe, as ideias se complementam e isso trará
+            soluções inovadoras
+            Pratique novos hábitos e se desenvolva continuamente.
+
+            Por: Fernanda Lewandowski – Associated Partner na eccho HR Specialists
+        </div>
+    </div>
+
+    <div id="rodape">
+        <div>
+
+        </div>
+        <!-- <nav id="navrodape">
+            <ul>
+                <a href="">
+                    <img id="rsocial" src="./imagens/facebookroxo.svg" alt="">
+                </a>
+                <a href="">
+                    <img id="rsocial" src="./imagens/instagramroxo.svg" alt="">
+                </a>
+            </ul>
+        </nav> -->
+
+        <div id="copy">
+            <p>Copyright © 2021, Caroline Beirão. Bandtec.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    function planejamento() {
+        setas.style.display = "";
+        asetarigth.style.display = "";
+        asetaleft.style.display = "none";
+
+        titestrat.style.display = "none";
+
+        planum.style.display = "";
+        plandois.style.display = "none";
+        metdum.style.display = "none";
+        doismtd.style.display = "none";
+        metdum.style.display = "none";
+        doismtd.style.display = "none";
+        metdtres.style.display = "none";
+        metdquatro.style.display = "none";
+        metdcinco.style.display = "none";
+        metdseis.style.display = "none";
+        metdsete.style.display = "none";
+        discmsg.style.display = "none";
+
+
+        metdsetaleft.style.display = "none";
+        metdsetarigth.style.display = "none";
+        metdsetarigth.style.display = "none";
+        mtddoisseta.style.display = "none";
+        asetarigth.style.display = "";
+        asetaleft.style.display = "none";
+        mtdseta.style.display = "none";
+        metdsetaleft.style.display = "none";
+        metdsetarigth.style.display = "none";
+        metd2setaleft.style.display = "none";
+        metd2setarigth.style.display = "none";
+        metd3setarigth.style.display = "none";
+        metd4setarigth.style.display = "none";
+        metd5setarigth.style.display = "none";
+        metd6setarigth.style.display = "none";
+        bloco1direita.style.height = "300px";
+
+
+    }
+
+    function prox() {
+        planum.style.display = "none";
+        asetarigth.style.display = "none";
+        plandois.style.display = "";
+        asetaleft.style.display = "";
+        metdum.style.display = "none";
+        mdoisetd.style.display = "none";
+        mtdseta.style.display = "none";
+    }
+
+    function ant() {
+        plandois.style.display = "none";
+        asetarigth.style.display = "";
+        planum.style.display = "";
+        asetaleft.style.display = "none";
+    }
+
+    function metodo() {
+        asetarigth.style.display = "none";
+        asetaleft.style.display = "none";
+        mtdseta.style.display = "";
+        metdsetaleft.style.display = "none";
+        metdsetarigth.style.display = "";
+        metd2setaleft.style.display = "none";
+        metd2setarigth.style.display = "none";
+        metd3setarigth.style.display = "none";
+        metd4setarigth.style.display = "none";
+        metd5setarigth.style.display = "none";
+        metd6setarigth.style.display = "none";
+
+        planum.style.display = "none";
+        plandois.style.display = "none";
+        titestrat.style.display = "none";
+        metdum.style.display = "";
+        doismtd.style.display = "none";
+        mtddoisseta.style.display = "none";
+        metdtres.style.display = "none";
+        discmsg.style.display = "none";
+
+        doismtd.style.display = "none";
+        metdquatro.style.display = "none";
+        metdcinco.style.display = "none";
+        metdseis.style.display = "none";
+        metdsete.style.display = "none";
+        bloco1direita.style.height = "260px";
+
+    }
+    function metdprox() {
+        mtddoisseta.style.display = "";
+        metdum.style.display = "none";
+        doismtd.style.display = "";
+        metdsetarigth.style.display = "none";
+        // metd2setaleft.style.display = "";
+        metd2setarigth.style.display = "";
+        metdtres.style.display = "none";
+        bloco1direita.style.height = "260px";
+
+    }
+
+    function metd2prox() {
+        mtddoisseta.style.display = "none";
+        metdum.style.display = "none";
+        doismtd.style.display = "none";
+        metdsetarigth.style.display = "none";
+        metd2setaleft.style.display = "none";
+        metd2setarigth.style.display = "none";
+        metdtres.style.display = "";
+        // metd3setaleft.style.display = "";
+        metd3setarigth.style.display = "";
+        mtdtresseta.style.display = "";
+    }
+
+    function metd3prox() {
+        mtddoisseta.style.display = "none";
+        metdum.style.display = "none";
+        doismtd.style.display = "none";
+        metdsetarigth.style.display = "none";
+        metd2setaleft.style.display = "none";
+        metd2setarigth.style.display = "none";
+        metdtres.style.display = "none";
+        metd3setaleft.style.display = "none";
+        metd3setarigth.style.display = "none";
+        mtdtresseta.style.display = "";
+        metdquatro.style.display = "";
+        metd3setaleft.style.display = "none"
+        bloco1direita.style.height = "300px";
+        metd4setarigth.style.display = "";
+        // metd4setaleft.style.display = "";
+        mtdquatroseta.style.display = "";
+    }
+
+    function metd4prox() {
+        mtddoisseta.style.display = "none";
+        metdum.style.display = "none";
+        doismtd.style.display = "none";
+        metdsetarigth.style.display = "none";
+        metd2setaleft.style.display = "none";
+        metd2setarigth.style.display = "none";
+        metdtres.style.display = "none";
+        metd3setaleft.style.display = "none";
+        metd3setarigth.style.display = "none";
+        mtdtresseta.style.display = "none";
+        metdquatro.style.display = "none";
+        metd3setaleft.style.display = "none"
+        bloco1direita.style.height = "320px";
+        metd4setarigth.style.display = "none";
+        metd4setaleft.style.display = "none";
+        mtdquatroseta.style.display = "none";
+        metdcinco.style.display = "";
+        mtdcincoseta.style.display = "";
+        // metd5setaleft.style.display = "";
+        metd5setarigth.style.display = "";
+    }
+
+    function metd5prox() {
+        mtddoisseta.style.display = "none";
+        metdum.style.display = "none";
+        doismtd.style.display = "none";
+        metdsetarigth.style.display = "none";
+        metd2setaleft.style.display = "none";
+        metd2setarigth.style.display = "none";
+        metdtres.style.display = "none";
+        metd3setaleft.style.display = "none";
+        metd3setarigth.style.display = "none";
+        mtdtresseta.style.display = "none";
+        metdquatro.style.display = "none";
+        metd3setaleft.style.display = "none"
+        bloco1direita.style.height = "380px";
+        metd4setarigth.style.display = "none";
+        metd4setaleft.style.display = "none";
+        mtdquatroseta.style.display = "none";
+        metdcinco.style.display = "none";
+        mtdcincoseta.style.display = "none";
+        metd5setaleft.style.display = "none";
+        metd5setarigth.style.display = "none";
+        metdseis.style.display = "";
+        mtdseisseta.style.display = "";
+        // metd6setaleft.style.display = "";
+        metd6setarigth.style.display = "";
+
+    }
+
+    function metd6prox() {
+        mtddoisseta.style.display = "none";
+        metdum.style.display = "none";
+        doismtd.style.display = "none";
+        metdsetarigth.style.display = "none";
+        metd2setaleft.style.display = "none";
+        metd2setarigth.style.display = "none";
+        metdtres.style.display = "none";
+        metd3setaleft.style.display = "none";
+        metd3setarigth.style.display = "none";
+        mtdtresseta.style.display = "none";
+        metdquatro.style.display = "none";
+        metd3setaleft.style.display = "none"
+        bloco1direita.style.height = "420px";
+        metd4setarigth.style.display = "none";
+        metd4setaleft.style.display = "none";
+        mtdquatroseta.style.display = "none";
+        metdcinco.style.display = "none";
+        mtdcincoseta.style.display = "none";
+        metd5setaleft.style.display = "none";
+        metd5setarigth.style.display = "none";
+        metdseis.style.display = "none";
+        metdsete.style.display = "";
+        mtdseisseta.style.display = "none";
+        bloco1direita.style.height = "200px";
+    }
+
+    function disciplina() {
+        asetaleft.style.display = "none";
+        titestrat.style.display = "none";
+
+        planum.style.display = "none";
+        plandois.style.display = "none";
+        metdum.style.display = "none";
+        doismtd.style.display = "none";
+        metdum.style.display = "none";
+        doismtd.style.display = "none";
+        metdtres.style.display = "none";
+        metdquatro.style.display = "none";
+        metdcinco.style.display = "none";
+        metdseis.style.display = "none";
+        metdsete.style.display = "none";
+
+
+        metdsetaleft.style.display = "none";
+        metdsetarigth.style.display = "none";
+        metdsetarigth.style.display = "none";
+        mtddoisseta.style.display = "none";
+        asetarigth.style.display = "none";
+        asetaleft.style.display = "none";
+        mtdseta.style.display = "none";
+        metdsetaleft.style.display = "none";
+        metdsetarigth.style.display = "none";
+        metd2setaleft.style.display = "none";
+        metd2setarigth.style.display = "none";
+        metd3setarigth.style.display = "none";
+        metd4setarigth.style.display = "none";
+        metd5setarigth.style.display = "none";
+        metd6setarigth.style.display = "none";
+
+
+
+        discmsg.style.display = "";
+        bloco1direita.style.height = "340px";
+    }
+
+
+    function pomodoro() {
+        autoex.style.display = "none";
+        robsonn.style.display = "none";
+        mpmental.style.display = "none";
+        textfundo.style.display = "none";
+        pomodoroo.style.display = "";
+    }
+
+    function robson() {
+        autoex.style.display = "none";
+        mpmental.style.display = "none";
+        pomodoroo.style.display = "none";
+        textfundo.style.display = "none";
+        robsonn.style.display = "";
+    }
+
+    function mapa() {
+        autoex.style.display = "none";
+        robsonn.style.display = "none";
+        pomodoroo.style.display = "none";
+        textfundo.style.display = "none";
+        mpmental.style.display = "";
+    }
+
+    function autoexplicacao() {
+        mpmental.style.display = "none";
+        robsonn.style.display = "none";
+        pomodoroo.style.display = "none";
+        textfundo.style.display = "none";
+        autoex.style.display = "";
+    }
+
+    function simulacoes() {
+        autoex.style.display = "none";
+        mpmental.style.display = "none";
+        robsonn.style.display = "none";
+        pomodoroo.style.display = "none";
+        textfundo.style.display = "none";
+        simula.style.display = "";
+        
+    }
+
+
+</script>

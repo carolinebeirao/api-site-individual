@@ -151,13 +151,14 @@ nav ul {
     font-size: 15px;
     padding-top: 17px; 
     margin-right: 10px;
-    color: white;
+    color: rgb(255, 255, 255);
     width: 90%;
     text-align: right;
+    text-transform: uppercase;
 }
 
 #foto-usuario {
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0);
     width: 40px;
     border-radius: 25px;
     margin: 0px 10px 0px 5px;
