@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOG</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="css/blog.css">
+    <title>BLOG</title>
 </head>
 
-<body>
+<body  onload="gerarGrafico()">
 
     <div id="caixanav">
         <nav id="nav1">
@@ -34,7 +35,12 @@
         </nav>
     </div>
 
-
+    <div class="contato">
+        <div class="grafico">
+            <h1>Confira qual é o foco dos usuarios que estão estudando por aqui!</h1>
+            <canvas id="myChart" class="canvas"></canvas>
+        </div>
+    </div>
 
     <div id="blocox">
         <div id="blocoTITULO2">
@@ -511,16 +517,6 @@
         <div>
 
         </div>
-        <!-- <nav id="navrodape">
-            <ul>
-                <a href="">
-                    <img id="rsocial" src="./imagens/facebookroxo.svg" alt="">
-                </a>
-                <a href="">
-                    <img id="rsocial" src="./imagens/instagramroxo.svg" alt="">
-                </a>
-            </ul>
-        </nav> -->
 
         <div id="copy">
             <p>Copyright © 2021, Caroline Beirão. Bandtec.</p>
@@ -532,6 +528,101 @@
 
 </html>
 <script>
+
+function gerarGrafico() {
+        fetch("/leituras/dados", {
+            method: "GET"
+        }).then(resposta => {
+
+            if (resposta.ok) {
+                resposta.json().then(json => {
+                    const plugin = {
+                        id: 'custom_canvas_background_color',
+                        beforeDraw: (chart) => {
+                            const ctx = chart.canvas.getContext('2d');
+                            ctx.save();
+                            ctx.globalCompositeOperation = 'destination-over';
+                            ctx.fillStyle = 'white';
+                            ctx.fillRect(0, 0, chart.width, chart.height);
+                            ctx.restore();
+                        }
+                    };
+                    var myChart = new Chart(document.getElementById('myChart'), {
+
+                        type: 'bar',
+                        data: {
+                            labels: ['OAB', 'CONCURSO',
+                                'ENEM', 'ENSINO MÉDIO',
+                                'GRADUAÇÃO', 'IDIOMAS', 'MUSICA',
+                                'PÓS GRADUAÇÃO', 'VESTIBULAR', 'OUTRO'
+                            ],
+                            datasets: [{
+                                label: '',
+                                data: [json.aob, json.concurso,
+                                json.enem, json.ensinomedio,
+                                json.graduacao, json.idiomas,
+                                json.musica, json.posgraduacao,
+                                json.vestibular, json.outros
+                                ],
+
+
+                                backgroundColor: [
+                                    'rgba(147, 57, 243, 0.658)',
+                                    'rgba(147, 57, 243, 0.658)',
+                                    'rgba(147, 57, 243, 0.658)',
+                                    'rgba(147, 57, 243, 0.658)',
+                                    'rgba(147, 57, 243, 0.658)',
+                                    'rgba(147, 57, 243, 0.658)',
+                                    'rgba(147, 57, 243, 0.658)',
+                                    'rgba(147, 57, 243, 0.658)',
+                                    'rgba(147, 57, 243, 0.658)',
+                                    'rgba(147, 57, 243, 0.658)' 
+                                ],
+                                borderColor: [
+                                    'rgba(147, 57, 244, 0.233)',
+                                    'rgba(147, 57, 244, 0.233)',
+                                    'rgba(147, 57, 244, 0.233)',
+                                    'rgba(147, 57, 244, 0.233)',
+                                    'rgba(147, 57, 244, 0.233)',
+                                    'rgba(147, 57, 244, 0.233)',
+                                    'rgba(147, 57, 244, 0.233)',
+                                    'rgba(147, 57, 244, 0.233)',
+                                    'rgba(147, 57, 244, 0.233)',
+                                    'rgba(147, 57, 244, 0.233)'
+                                ],
+                                borderWidth: 3
+                            }]
+                        },
+                        plugins: [plugin],
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            },
+                            labels: {
+                                font: {
+                                    size: 20,
+                                    family: 'arial'
+                                }
+                            }
+                        }
+                    });
+                })
+            } else {
+
+                console.log('Erro no gráfico');
+                response.text().then(function (resposta) {
+
+                });
+
+
+            }
+        });
+
+        return false;
+    }
+
     function planejamento() {
         setas.style.display = "";
         asetarigth.style.display = "";

@@ -7,6 +7,17 @@ body {
     color: white;
 }
 
+.contato {
+    /* background-image: url("../imagens/redecadastro.png") ; */
+    background-size: 80% ;
+    padding: 1px 0px 10px 0px;
+    margin: 0 auto;
+    width: 53%;
+    margin-top: 20px;
+    height: 490px;
+
+}
+
 a {
     text-decoration: none; 
     text-transform: none;
@@ -379,4 +390,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    background-color: rgba(147, 57, 244, 0.233);
 }
+
+

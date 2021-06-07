@@ -33,6 +33,9 @@
                             <a href="./index.html">
                                 <li onclick="logoff()">Desconectar</li>
                             </a>
+                            <a href="https://mystudy.on.spiceworks.com/portal">
+                                <li>suporte</li>
+                            </a>
                         </span>
                     </nav>
                 </div>
@@ -59,21 +62,21 @@
             </div>
 
             <h5>INSERIR NOVO TÓPICO </h5>
-            
+
             <!-- PARTE DE CADASTRAR TOPICO -->
             <div id="top">
 
                 <div id="disciplina-topico">
                     <p>Disciplina</p>
-                    <textarea id="ndisciplina" placeholder="nome da disciplina"></textarea>
+                    <textarea id="ndisciplina" placeholder="nome da disciplina" oninput="handleInput(event)"></textarea>
                 </div>
                 <div id="assunto-topico">
                     <p>Assunto</p>
-                    <textarea id="nassunto" placeholder="nome do assunto"></textarea>
+                    <textarea id="nassunto" placeholder="nome do assunto" oninput="handleInput(event)"></textarea>
                 </div>
                 <div id="nome-topico">
                     <p>Titulo do topico</p>
-                    <textarea id="ntitulo" placeholder="nome do topico"></textarea>
+                    <textarea id="ntitulo" placeholder="nome do topico" oninput="handleInput(event)"></textarea>
                 </div>
                 <div id="descricao-topico">
                     <p>descrição do topico</p>
@@ -234,7 +237,19 @@
 </html>
 <script>
 
-    var vdisciplina = [];
+    function handleInput(e) {                // função para o usuario digitar em caixa alta nos inputs
+        var ss = e.target.selectionStart;
+        var se = e.target.selectionEnd;
+        e.target.value = e.target.value.toUpperCase();
+        e.target.selectionStart = ss;
+        e.target.selectionEnd = se;
+    }
+    var desctopico = [];
+    var totalassunto = []; //vetor para tudo de assutno, mesmo repetidos
+    var totaltopico = [];   //vetor para tudo de topico, mesmo repetidos
+    var totaldisciplina = []; //vetor para tudo de disciplina, mesmo repetidos
+
+    var vdisciplina = []; // esse vetor vai receber apenas nomes de disciplians que não foram cadstradas
     function bt_cadastrar() {
         var disciplina = ndisciplina.value;
         var assunto = nassunto.value;
@@ -242,7 +257,7 @@
         var descricao = dtopico.value;
         var dia = sdia.value;
 
-        // laço para verificar se disciplina ja foi cadastrado 
+        // laço para verificar se disciplina ja foi cadastrada  [no vetor]
         for (index = 0; index <= vdisciplina.length; index++) {
             if (disciplina == '') { // if para não cadastrar disciplina sem valor no vetor
                 break
@@ -256,6 +271,13 @@
         if (index > vdisciplina.length) {
             vdisciplina.push(ndisciplina.value);
         }
+
+
+        // para usar no futuro com pesquisa por disciplina cadastrada atravez do length
+        totalassunto.push(assunto);
+        totaltopico.push(titulo);
+        totaldisciplina.push(disciplina);
+        desctopico.push(descricao);
 
 
 
@@ -287,11 +309,12 @@
         //Laço para imprimir todos os vetores cadastrados em vdisciplinas para não ter repetição de nomes
         for (cont = 0; cont < vdisciplina.length; cont++) {
             blocodisciplina.innerHTML += `
-                  <div id="bloco-conteudo">
+                  <div id="bloco-conteudo"  onclick="mostrarcad()" >
                         <div>
                             ${vdisciplina[cont]}
                         </div>
                     </div>`;
+
         }
 
     }
@@ -332,8 +355,25 @@
         }
     }
 
+        var truedisciplina = [];
+        // inplementar no futuro um filtro de disciplina
+    // function mostrarcad() {
+        
+    //     for (index = 0; index < totaldisciplina.length; index++) {
+    //         if (totaldisciplina[index] === vdisciplina[0]) {
+    //             truedisciplina.push(totaldisciplina[index].length);
+    //         } else {
+
+    //         }
+    //     }
+
+    //     for (index = 0; index < truedisciplina; index++) {
+    //         blocodisciplina.innerHTML += `<div id="bloco-conteudo"  <div style="display: flex; justify-content: space-between;"><span style="font-size: 14px; color:#f13f3f;">  ${totalassunto[truedisciplina[index]]} </span>  <span style="font-size: 14px; color: #126ee7;">  ${totaltopico[truedisciplina[index]]}</span> </div>  <br><br> <span style="font-size: 14px;">${desctopico[truedisciplina[index]]}  </span> <br></div><hr>`;
+    //     }
+    // }
 
 
     verificar_autenticacao();
 
 </script>
+

@@ -25,6 +25,9 @@
                     <a href="./login.html">
                         <li>Entrar</li>
                     </a>
+                    <a href="https://mystudy.on.spiceworks.com">
+                        <li>ajuda</li>
+                    </a>
                 </span>
             </nav>
             <nav id="nav2">
@@ -46,13 +49,13 @@
                 <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
                     <div class="inpt_style">
                         <p>Nome completo</p>
-                        <input type="text" name="nome" class="input-padrao" autofocus="autofocus"
+                        <input type="name" name="nome" class="input-padrao" autofocus="autofocus"
                             placeholder="Nome e sobrenome" required minlength="4">
                     </div>
 
                     <div class="inpt_style">
                         <p>Email</p>
-                        <input type="text" name="login" class="input-padrao" placeholder="seu nome de usuário" required
+                        <input type="email" name="login" class="input-padrao" placeholder="seu nome de usuário" required
                             minlength="4">
                     </div>
 
@@ -60,6 +63,34 @@
                         <p>Senha</p>
                         <input type="password" name="senha" class="input-padrao" placeholder="***************" required
                             minlength="4">
+                    </div>
+                    
+                    <div id="ipt_foco">
+                        <p>Qual o seu principal foco de estudos com o mystudy?</p>
+                        <select name="focoestudo" id="combo">
+                            <option value="">Selecione o seu foco de estudos</option>
+                            <option value="1">AOB</option>
+                            <option value="2">CONCURSO</option>
+                            <option value="3">ENEM</option>
+                            <option value="4">ENSINO MÉDIO</option>
+                            <option value="5">GRADUAÇÃO</option>
+                            <option value="6">IDIOMAS</option>
+                            <option value="7">MUSICA</option>
+                            <option value="8">PÓS GRADUAÇÃO</option>
+                            <option value="9">VESTIBULAR</option>
+                            <option value="10">OUTROS</option>
+                        </select>
+                    </div>
+                    <div id="ipt_foco">
+                        <p>Quantas vezes na semana você se dedica a esse estudos ?</p>
+                        <select name="freq" id="combo">
+                            <option value="">Selecione a frenquência</option>
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                        </select>
                     </div>
 
                     <div id="inpt_cadastrar">
