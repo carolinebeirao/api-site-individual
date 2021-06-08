@@ -99,7 +99,7 @@ nav ul {
     margin: 0 auto;
     width: 36%;
     margin-top: 30px;
-    height: 400px;
+    height: 460px;
 
 }
 
@@ -154,6 +154,11 @@ nav ul {
     background-color: #8400ff;
     border: 6px solid #8400ff;
 }
+
+#ipt_foco {
+    color: white;
+}
+
 
 #marca {
     /* background-color: blue; */

@@ -9,37 +9,48 @@
     <title>BLOG</title>
 </head>
 
-<body  onload="gerarGrafico()">
+<body onload="gerarGrafico()">
 
     <div id="caixanav">
+
         <nav id="nav1">
             <img src="./imagens/chapeubranco.svg" alt="" width="25px">
             <span id="navleft">
+
                 <a href="./USUARIO.html">
                     <li>Voltar para o painel </li>
                 </a>
+
                 <a href="./index.html">
                     <li onclick="logoff()">Desconectar</li>
                 </a>
+
             </span>
         </nav>
+
         <nav id="nav2">
             <ul>
+
                 <a href="">
                     <img id="rsocial" src="./imagens/facebookroxo.svg" alt="">
                 </a>
+
                 <a href="">
                     <img id="rsocial" src="./imagens/instagramroxo.svg" alt="">
                 </a>
+
             </ul>
         </nav>
+
     </div>
 
     <div class="contato">
+
         <div class="grafico">
             <h1>Confira qual é o foco dos usuarios que estão estudando por aqui!</h1>
             <canvas id="myChart" class="canvas"></canvas>
         </div>
+
     </div>
 
     <div id="blocox">
@@ -51,22 +62,28 @@
                 <div onclick="planejamento()" id="bloquinhoroxo">
                     Planejamento
                 </div>
+
                 <div onclick="metodo()" id="bloquinhoroxo">
                     Método
                 </div>
+
                 <div onclick="disciplina()" id="bloquinhoroxo">
                     Disciplina
                 </div>
+
             </div>
+
         </div>
         <div id="bloco1grade">
         </div>
 
         <div id="bloco1direita">
             <div id="msgbloco1direita">
+
                 <div id="titestrat">
                     <h1>Para ter um bom desempenho é importante seguir uma boa estratégia!</h1>
                 </div>
+
                 <div id="planum" style="display: none;">
 
                     <b> Planejamento </b>
@@ -88,8 +105,9 @@
                     Portanto não basta assistir aulas e fazer provas de maneira passiva e automática.
                     É necessário ter uma postura ativa perante a própria formação.Seja o protagonista da sua
                     capacitação.
-
                 </div>
+
+
                 <div id="plandois" style="display: none;">
                     <b>Como vencer esse desafio(de maneira eficiente) ? </b>
                     <br><br>
@@ -104,6 +122,8 @@
                     é crucial para que você possa se organizar e traçar metas.Sem metas é impossível [
                     organizar o tempo, e assim não haverá planejamento nenhum.`;
                 </div>
+
+
                 <div id="metdum" style="display: none;">
                     Método
                     <br>
@@ -120,8 +140,9 @@
                     <br><br>
                     Faça uma lista do que precisa ser estudado naquela semana, em ordem de prioridade e importância, e
                     estude uma seção de cada vez.
-
                 </div>
+
+
                 <div id="doismtd" style="display: none;">
                     Mas estude de maneira intercalada. Lembre-se que os conteúdos são interrelacionados (apesar das
                     disciplinas quase sempre serem ministradas como se nada tivesse conexão). Lembre-se que um conteúdo
@@ -136,9 +157,9 @@
                     A curva de rendimento varia de pessoa para pessoa, e depende da base (pré-requisitos), familiaridade
                     com o conteúdo, estado de tranquilidade (ou ansiedade), saúde, se a pessoa está bem hidratada e
                     alimentada, confortável...
-
-
                 </div>
+
+
                 <div id="metdtres" style="display: none;">
                     Apesar de todas essas variáveis, uma coisa é certa: depois de um tempo de esforço, o rendimento
                     diminui. E quanto mais tempo você estuda em baixo rendimento, mais tempo você desperdiça.
@@ -153,6 +174,8 @@
                     <br><br>
                     Quanto maior a frequência que você volta na disciplina, maior será seu rendimento.
                 </div>
+
+
                 <div id="metdquatro" style="display: none;">
                     Não passe mais que duas horas com a mesma disciplina. Por exemplo, se tiver uma tarde inteira para
                     estudar, troque de disciplina a cada duas horas.
@@ -174,6 +197,8 @@
                     Se tiver tempo, leia o conteúdo em mais de um livro
                     Se não tiver tempo, leia o livro na cama, antes de dormir
                 </div>
+
+
                 <div id="metdcinco" style="display: none;">
 
                     3° DORMIR (sim, você precisa dormir no mesmo dia que assistiu a aula e estudou/transcreveu os
@@ -205,8 +230,9 @@
                     A eficiência desse sistema é inversamente proporcional ao número de dias que separa a aula do
                     resumo.
                 </div>
-                <div id="metdseis" style="display: none;">
 
+
+                <div id="metdseis" style="display: none;">
                     5° Fazer os exercícios mais simples ("substituição de fórmula"), até dois dias depois da aula.
                     Sempre que puder, aprenda a deduzir fórmulas, e nunca decorá-las
                     Evite usar o solucionário nessa etapa
@@ -235,6 +261,8 @@
                     alcançada quando determinado conteúdo é encadeado e relacionado com outros conteúdos (anteriores ou
                     posteriores), e essa maturidade pode levar tempo para acontecer.
                 </div>
+
+
                 <div id="metdsete" style="display: none;">
                     <b>O que fazer se você não tiver a base ou o tempo para estudar?</b>
                     <br><br>
@@ -251,13 +279,14 @@
                     formação. Mas é infinitamente melhor atrasar de maneira controlada, consciente e planejada, do que
                     passar o curso inteiro tropeçando.
                 </div>
+
+
                 <div id="discmsg" style="display: none;">
                     <b>Disciplina</b>
                     <br> <br>
                     "Relação de submissão de quem é ensinado, para com aquele que ensina; observância de preceitos ou
                     ordens escolares..."
                     <br><br>
-
                     <b>Mas e a motivação (para fazer esse planejamento e seguir esse método)?</b>
                     <br><br>
                     Se você só planejar/estudar quando estiver motivado (com o trabalho ou o conteúdo), então saiba que
@@ -273,54 +302,59 @@
                     Quando você começar a cumprir as metas que você pré-determinou, naturalmente você se sentirá
                     motivado (sentirá o prazer da conquista e da vitória). Esse será um importante combustível para
                     aumentar a sua dedicação e a sua disciplina, e fará com que você alcance mais rápido seus objetivos.
-
-
                 </div>
 
             </div>
         </div>
 
-
+        <!-- BOTÕES DO SLIDE DE estratégia -->
         <div id="setas">
             <img onclick="ant()" id="asetaleft" src="./imagens/left.svg" alt="" style="display: none ; width: 50px;">
             <img onclick="prox()" id="asetarigth" src="./imagens/rigth.svg" alt="" style="display: none; width: 50px; ">
         </div>
+
         <div id="mtdseta" style="display: none;">
             <img onclick="metdant()" id="metdsetaleft" src="./imagens/left.svg" alt=""
                 style="display: none ; width: 50px;">
             <img onclick="metdprox()" id="metdsetarigth" src="./imagens/rigth.svg" alt=""
                 style="display: none; width: 50px; ">
         </div>
+
         <div id="mtddoisseta" style="display: none;">
             <img onclick="metd2ant()" id="metd2setaleft" src="./imagens/left.svg" alt=""
                 style="display: none ; width: 50px;">
             <img onclick="metd2prox()" id="metd2setarigth" src="./imagens/rigth.svg" alt=""
                 style="display: none; width: 50px; ">
         </div>
+
         <div id="mtdtresseta" style="display: none;">
             <img onclick="metd3ant()" id="metd3setaleft" src="./imagens/left.svg" alt=""
                 style="display: none ; width: 50px;">
             <img onclick="metd3prox()" id="metd3setarigth" src="./imagens/rigth.svg" alt=""
                 style="display: none; width: 50px; ">
         </div>
+
         <div id="mtdquatroseta" style="display: none;">
             <img onclick="metd4ant()" id="metd4setaleft" src="./imagens/left.svg" alt=""
                 style="display: none ; width: 50px;">
             <img onclick="metd4prox()" id="metd4setarigth" src="./imagens/rigth.svg" alt=""
                 style="display: none; width: 50px; ">
         </div>
+
         <div id="mtdcincoseta" style="display: none;">
             <img onclick="metd5ant()" id="metd5setaleft" src="./imagens/left.svg" alt=""
                 style="display: none ; width: 50px;">
             <img onclick="metd5prox()" id="metd5setarigth" src="./imagens/rigth.svg" alt=""
                 style="display: none; width: 50px; ">
         </div>
+
         <div id="mtdseisseta" style="display: none;">
             <img onclick="metd6ant()" id="metd6setaleft" src="./imagens/left.svg" alt=""
                 style="display: none ; width: 50px;">
             <img onclick="metd6prox()" id="metd6setarigth" src="./imagens/rigth.svg" alt=""
                 style="display: none; width: 50px; ">
         </div>
+
         <div id="setadisciplina" style="display: none;">
             <img onclick="discipant()" id="discisetaleft" src="./imagens/left.svg" alt=""
                 style="display: none ; width: 50px;">
@@ -338,6 +372,7 @@
         <br>
         <br>
     </div>
+
     <div id="blocos">
         <div onclick="pomodoro()" id="bloquinho">
             Técnica Pomodoro
@@ -355,6 +390,7 @@
             Simulações cronometradas
         </div>
     </div>
+
     <div id="blocos" style="display: none;">
         <div id="bloquinho">
             Autointerrogação
@@ -372,8 +408,10 @@
             Gravações de áudio
         </div>
     </div>
+
     <br>
     <div id="textoclick">
+
         <div id="textfundo">
             <b>Quais são os métodos de estudo?</b>
             <br><br>
@@ -388,6 +426,7 @@
             <br><br>
             Confira alguns dos principais métodos de estudo!
         </div>
+
         <div id="pomodoroo" style="display: none;">
             A técnica Pomodoro é, na verdade, um método de gestão de tempo, e um dos mais conhecidos.
             <br><br>
@@ -402,6 +441,7 @@
             O ideal é que intercale sempre os períodos de dedicação com os de descanso, mas os minutos é você quem
             decide.
         </div>
+
         <div id="robsonn" style="display: none;">
             Se você ficou curioso para saber o que significa a sigla EPL2R, já vamos explicar.
             <br><br>
@@ -431,6 +471,7 @@
             Vale também conversar com outras colegas.
             Quem sabe, assim, consegue agregar ainda mais conhecimento.
         </div>
+
         <div id="mpmental" style="display: none;">
             Quem adora aplicar métodos de estudo, certamente, vai ver o mapa mental com bons olhos.
             <br><br>
@@ -448,24 +489,30 @@
             Então, embaixo dos subtemas, lista-se as informações mais importantes sobre eles.
             Imagens e desenhos complementam o mapa mental.
         </div>
+
         <div id="autoex" style="display: none;">
             Imagine-se como um professor e tente dar uma aula para si mesmo. <br>
             É assim que funciona o método de autoexplicação. <br>
             Quando você fala em voz alta, é capaz de reconhecer mais facilmente o raciocínio que foi criado. <br>
             Além disso, é uma técnica que ajuda a memorizar. <br>
         </div>
+
         <div id="simula" style="display: none;">
             Você, certamente, já fez alguma apresentação com tempo para ser cumprido.
             Então, sabe que é um desafio enorme se manter entre os minutos determinados.
             Mas a missão pode ser mais simples se você apostar em simulações cronometradas.
             Isso significa fazer testes calculando o tempo gasto e organizando melhor as suas falas.
         </div>
+
     </div>
 
     <div id="aprender">
+
+
         <h1>Aprender, desaprender e reaprender!</h1>
         <h3>“O analfabeto do século XXI não será aquele que não consegue ler e escrever, mas aquele que não consegue
             aprender, desaprender e reaprender.”</h3>
+
         <div id="textoaprender">
             em tempos de pandemia em que é necessário a adaptabilidade, flexibilidade, multitarefas, organização do
             tempo, produtividade, equilíbrio, inteligência emocional e por aí vai. São tantas habilidades que
@@ -529,7 +576,7 @@
 </html>
 <script>
 
-function gerarGrafico() {
+    function gerarGrafico() {
         fetch("/leituras/dados", {
             method: "GET"
         }).then(resposta => {
@@ -576,7 +623,7 @@ function gerarGrafico() {
                                     'rgba(147, 57, 243, 0.658)',
                                     'rgba(147, 57, 243, 0.658)',
                                     'rgba(147, 57, 243, 0.658)',
-                                    'rgba(147, 57, 243, 0.658)' 
+                                    'rgba(147, 57, 243, 0.658)'
                                 ],
                                 borderColor: [
                                     'rgba(147, 57, 244, 0.233)',
@@ -912,7 +959,7 @@ function gerarGrafico() {
         pomodoroo.style.display = "none";
         textfundo.style.display = "none";
         simula.style.display = "";
-        
+
     }
 
 

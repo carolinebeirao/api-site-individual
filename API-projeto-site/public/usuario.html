@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <!-- CAIXA DIREITS, AGLOBA OS CADASTROS DE CONTEUDO E CRONOGRAMA SEMANAL -->
+        <!-- CAIXA DIREITA, AGLOBA OS CADASTROS DE CONTEUDO E CRONOGRAMA SEMANAL -->
         <div id="rigth-red">
 
             <!-- PARTE SUPERIOR COM NOME DE USUARIO E FOTO -->
@@ -70,14 +70,17 @@
                     <p>Disciplina</p>
                     <textarea id="ndisciplina" placeholder="nome da disciplina" oninput="handleInput(event)"></textarea>
                 </div>
+
                 <div id="assunto-topico">
                     <p>Assunto</p>
                     <textarea id="nassunto" placeholder="nome do assunto" oninput="handleInput(event)"></textarea>
                 </div>
+
                 <div id="nome-topico">
                     <p>Titulo do topico</p>
                     <textarea id="ntitulo" placeholder="nome do topico" oninput="handleInput(event)"></textarea>
                 </div>
+
                 <div id="descricao-topico">
                     <p>descrição do topico</p>
                     <textarea id="dtopico" placeholder="descrição do topico"></textarea>
@@ -191,45 +194,57 @@
                 <h3>ADICIONAR LEMBRETE</h3>
 
                 <div id="adicionalembrete">
+
                     <div id="lembrete-topico">
                         <p>O que você deseja lembrar ?</p>
                         <textarea id="arealembrete" placeholder="digite aqui"></textarea>
                     </div>
+
                     <div id="lembrete-topico">
                         <p>Quando ?</p>
                         <input type="date" id="datalembrete"></input>
                     </div>
+
                     <button onclick="bt_cadastrarlembrete()">ADICIONAR</button>
+
                 </div>
 
             </div>
 
             <!-- APARECE LEMBRETE -->
             <div id="prox">
+
                 <h3>LEMBRETES</h3>
+
                 <div style=" color: rgb(250, 213, 92); font-family: arial; justify-content: space-between;"
                     id="msglembrete">
                 </div>
+
             </div>
 
             <!-- APARECE FRASE DO DIA -->
             <div id="dash">
+
                 <div style="display: flex;">
                     <h3>FRASE DO DIA</h3>
                 </div>
+
                 <div id="msgdodia">
                     <br> <br> <br> <br> há uma frase te esperando hoje. ... <button onclick="sortear()"
                         id="sort">VER</button><br> <br>
                 </div>
+
             </div>
 
         </div>
     </div>
     <!-- RODAPÉ -->
     <div id="rodape">
+
         <div id="copy">
             <p>Copyright © 2021, Caroline Beirão. Bandtec.</p>
         </div>
+
     </div>
 
 </body>
@@ -355,10 +370,10 @@
         }
     }
 
-        var truedisciplina = [];
-        // inplementar no futuro um filtro de disciplina
+    //var truedisciplina = [];
+    // inplementar no futuro um filtro de disciplina
     // function mostrarcad() {
-        
+
     //     for (index = 0; index < totaldisciplina.length; index++) {
     //         if (totaldisciplina[index] === vdisciplina[0]) {
     //             truedisciplina.push(totaldisciplina[index].length);
@@ -376,4 +391,3 @@
     verificar_autenticacao();
 
 </script>
-

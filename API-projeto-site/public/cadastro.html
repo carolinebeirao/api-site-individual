@@ -12,7 +12,11 @@
 <body>
 
     <div class="header">
+
+
         <div id="caixa">
+
+
             <nav id="nav1">
                 <img src="./imagens/chapeubranco.svg" alt="" width="25px">
                 <span id="navleft">
@@ -30,6 +34,7 @@
                     </a>
                 </span>
             </nav>
+
             <nav id="nav2">
                 <ul>
                     <a href="">
@@ -40,13 +45,20 @@
                     </a>
                 </ul>
             </nav>
+
+
         </div>
+
+
     </div>
     <div class="contato">
         <div class="container">
+
             <h1>Faça aqui seu cadastro!</h1>
+
             <div class="formulario">
                 <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+
                     <div class="inpt_style">
                         <p>Nome completo</p>
                         <input type="name" name="nome" class="input-padrao" autofocus="autofocus"
@@ -64,7 +76,7 @@
                         <input type="password" name="senha" class="input-padrao" placeholder="***************" required
                             minlength="4">
                     </div>
-                    
+
                     <div id="ipt_foco">
                         <p>Qual o seu principal foco de estudos com o mystudy?</p>
                         <select name="focoestudo" id="combo">
@@ -81,15 +93,16 @@
                             <option value="10">OUTROS</option>
                         </select>
                     </div>
+
                     <div id="ipt_foco">
-                        <p>Quantas vezes na semana você se dedica a esse estudos ?</p>
+                        <p>Quantas vezes na semana você se dedica a esse estudo ?</p>
                         <select name="freq" id="combo">
                             <option value="">Selecione a frenquência</option>
-                           <option value="1">1</option>
-                           <option value="2">2</option>
-                           <option value="3">3</option>
-                           <option value="4">4</option>
-                           <option value="5">5</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
 
@@ -99,13 +112,12 @@
                     </div>
 
                 </form>
-                <div>
-                    <!-- <img src="./imagens/tenor.gif" id="img_aguarde"> -->
-                </div>
+
 
                 <div id="div_erro" style="display: none;">
                     <P>ERRO NO CADASTRO</P>
                 </div>
+
             </div>
         </div>
 
@@ -113,51 +125,53 @@
             <img src="./imagens/chapeubranco.svg" alt="">
             <p>MYSTUDY</p>
         </div>
+
         <div id="marca">
             <img id="img_aguarde" src="./imagens/tenorcinza..gif" alt="" style="display: none; width:40px;">
         </div>
     </div>
-    
+
 
 </body>
 
 </html>
 <script>
-function cadastrar() {
-    aguardar();
-    var formulario = new URLSearchParams(new FormData(form_cadastro));
-    fetch("/usuarios/cadastrar", {
-        method: "POST",
-        body: formulario
-    }).then(function (response) {
-        
-        if (response.ok) {
 
-            window.location.href='login.html';
+    function cadastrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
 
-        } else {
+            if (response.ok) {
 
-            console.log('Erro de cadastro!');
-            response.text().then(function (resposta) {
-                div_erro.innerHTML = resposta;
-            });
-            finalizar_aguardar();
-        }
-    });
+                window.location.href = 'login.html';
 
-    return false;
-}
+            } else {
 
-function aguardar() {
-    btn_entrar.disabled = true;
-    img_aguarde.style.display='block';
-    div_erro.style.display='none';
-}
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
 
-function finalizar_aguardar() {
-    btn_entrar.disabled = false;
-    img_aguarde.style.display='none';
-    div_erro.style.display='block';
-}
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display = 'block';
+        div_erro.style.display = 'none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display = 'none';
+        div_erro.style.display = 'block';
+    }
 
 </script>
